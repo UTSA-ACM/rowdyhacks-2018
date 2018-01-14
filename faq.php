@@ -5,7 +5,7 @@
 			require('common/head-includes.php');
 		?>
 		<title>
-			RowdyHacks
+			RowdyHacks 2018
 		</title>
 		<style type="text/css">
 			.faq-item {
