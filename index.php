@@ -27,7 +27,7 @@
 							<div class="row section-container">
 								<div class="col-sm-12" style="text-align:center;">
 									<h1 style="font-family:yellowtail;font-size:60px;margin:20px 20px 50px 20px;color:#256dad;">
-										RowdyHacks 2017
+										RowdyHacks 2018
 									</h1>
 									<img src="images/RowdyHacks.png" style="width:80%;" />
 									<br />

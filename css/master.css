@@ -115,7 +115,7 @@ body {
 }
 
 .nav>li>a:hover, .nav>li>a:active{
-	background-color: #003b7b;
+	background-color: #843902;
 }
 
 .icon-bar{
@@ -258,9 +258,6 @@ body {
 	/*box-shadow: 0px 1px 11px -3px;*/
 	/*border-radius: 3px;*/
 	/*background-color: #ffffff;*/
-	
-	
-	
 }
 
 .partial-section-container>*[class*="col-"] {
@@ -506,7 +503,7 @@ input[type=image].slack-button:hover, input[type=image].slack-button:active {
 	opacity: 1.0;
 	box-shadow: 0px 0px 0px 0px transparent;
 	height: 250px;
-	overflow: hidden;
+	/*overflow: hidden;*/
 	/*
 	position:relative;
 	bottom:-500px;
@@ -589,3 +586,18 @@ input[type=image].slack-button:hover, input[type=image].slack-button:active {
 	}
 }
 
+
+.vertical-middle-align {
+    display: flex;
+    flex-direction: row;
+}
+
+.vertical-middle-align > [class^="col-"], .vertical-middle-align > [class*="col-"] {
+    display: flex;
+    align-items: center;
+    /*justify-content: center;*/
+}
+
+.vertical-middle-align > [class^="col-"] > div, .vertical-middle-align > [class*="col-"] > div {
+    /*flex-grow: 1;*/
+}

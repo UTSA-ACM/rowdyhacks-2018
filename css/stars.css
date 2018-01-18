@@ -11,27 +11,23 @@
 				perspective: 1px;
 				overflow-x: hidden;
 				overflow-y: scroll;
-				/*background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);*/
+				
 			}
 			
 			#stars-container {
-				position:absolute;top:0;left:0;right:0;bottom:1000px;
-				height: 0;
+				/*position:absolute;*/top:0;left:0;right:0;bottom:1000px;
+				
 			}
 			
 			#group1 {
+				
 				position:relative;
+				/*
 				-webkit-transform-style: preserve-3d;
 				transform-style: preserve-3d;
+				/**/
 			}
-			/*
-			#group1 {
-				height: 1px;
-				position: relative;
-				transform-style: preserve-3d;
-				font-size: 20px;
-			}
-			*/
+			
 			.star-layer-3 {
 				transform: translateZ(-3px) scale(4);
 				height: 50vh;
@@ -58,10 +54,11 @@
 				top: -2000px;
 				background: transparent;
 			}
-			
+			/*
 			#content {
 				background: transparent;
 			}
+			*/
 			
 
 

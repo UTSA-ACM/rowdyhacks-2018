@@ -1,3 +1,8 @@
+#star-layer * {
+				-webkit-transform-style: preserve-3d;
+				transform-style: preserve-3d;
+}
+
 #star-layer-1 {
   width: 3px;
   height: 3px;
