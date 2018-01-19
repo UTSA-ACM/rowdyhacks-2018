@@ -11,8 +11,9 @@
                 color: orange;
             }
         </style>
+        <link href="https://fonts.googleapis.com/css?family=Yellowtail" rel="stylesheet">
     </head>
-    <body style="background-color:#000;color:#fff;font-family:arial;text-align:center;">
+    <body style="background-color:#0c2340;color:#fff;font-family:arial;text-align:center;">
         <div id="spacer" style="height:25vh;">
         </div>
         <h1 style="border-style:none none solid none; border-width:3px;border-color:orange;display:inline-block;padding:20px;font-family:yellowtail;font-size:100px;">
