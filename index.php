@@ -4,6 +4,7 @@
         include('common/head-includes.php');
         ?>
         <style type="text/css">
+            @import url('https://fonts.googleapis.com/css?family=Yellowtail');
             .footer-social {
                 color: #ffffff;
             }
