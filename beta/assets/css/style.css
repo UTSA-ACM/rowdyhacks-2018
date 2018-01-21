@@ -244,7 +244,7 @@ ul{
     margin-bottom: 4rem;
 }
 .overlay {
-    background-color: rgba(97, 22, 204, 0.65);
+    background-color: rgba(216, 106, 24, 0.65);
     width: 100%;
     height: 750px;
 }
@@ -328,8 +328,8 @@ Button
 .btn-primary.disabled,
 .btn-primary.disabled:hover {
     color: #ffffff;
-    background-color: #522bac;
-    border-color: #522bac;
+    background-color: #d45d06;
+    border-color: #d45d06;
 }
 
 
@@ -352,14 +352,14 @@ Button
 
 }
 .btn:hover {
-    background-color:#522bac;
+    background-color:#d45d06;
     color: #fff;
     text-decoration: none;
 }
 
 .btn-primary {
     color: #fff;
-    background-color: #503392;
+    background-color: #a64803;
     border-color: #fff;
     transition: .5s;
     border: 1px solid #fff;
@@ -377,10 +377,10 @@ Button
 
 
 .btn-larg{
-    border: 1px solid #503392;
+    border: 1px solid #a64803;
     color:#fff;
     padding: 6px 30px;
-    background: #503392;
+    background: #a64803;
 }
 
 
@@ -649,7 +649,7 @@ input::-ms-input-placeholder {
 }
 .main_service_area .single_service_right .single_service:hover .single_service_icon i, 
 .main_service_area .single_service_right .single_service:hover .single_service_content h3{
-    color:#503392;   
+    color:#a64803;   
 }
 .main_service_area .single_service_right .single_service .single_service_icon{
     width:15%;
@@ -684,7 +684,7 @@ input::-ms-input-placeholder {
 .main_choose_area .main_choose_content .single_choose_content{} 
 .main_choose_area .main_choose_content .single_choose_content h1{
     font-size:3.125rem;
-    color:#503392;
+    color:#a64803;
 } 
 .main_choose_area .main_choose_content .single_choose_content p{
     font-size:1.125rem;
@@ -727,7 +727,7 @@ input::-ms-input-placeholder {
     color: #223d61;
 }
 .main_mix_menu ul li.active {
-    background: #503392;
+    background: #a64803;
     color:#fff;
 }
 
@@ -761,7 +761,7 @@ input::-ms-input-placeholder {
     left: 10%;
     width: 80%;
     height: 80%;
-    border: 20px solid #4e3391;
+    border: 20px solid #6f3002;
     padding: 90px 0px 0px 0px;
 }
 .mixi_portfolio_overlay .overflow_hover_text i{
@@ -937,7 +937,7 @@ input::-ms-input-placeholder {
 }
 
 .scrollup:hover {
-    background: #503392;
+    background: #a64803;
     opacity: 1;
 }
 
