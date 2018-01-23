@@ -34,7 +34,7 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <header id="main_menu" class="header navbar-fixed-top">            
+        <header id="main_menu" class="header navbar-fixed-top" style="overflow;none;">
             <div class="main_menu_bg">
                 <div class="container">
                     <div class="row">
@@ -61,7 +61,8 @@
                                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                         <ul class="nav navbar-nav navbar-right">
                                             <li><a href="#home">Home</a></li>
-                                            <li><a href="#service">Service</a></li>
+                                            <li><a href="#about">About</a></li>
+                                            <li><a href="#about">Schedule</a></li>
                                             <li><a href="#sponsors">Sponsors</a></li>
                                             <li><a href="#contact">Contact</a></li>
                                         </ul>    
@@ -73,7 +74,6 @@
                     </div>
 
                 </div>
-
             </div>
         </header> <!--End of header -->
 
@@ -93,7 +93,7 @@
                                         <p class="subtitle">Small business with big dreams</p>
 
                                         <div class="home_btn">
-                                            <a href="" class="btn btn-md">Sign Up</a>
+                                            <a href="" class="btn btn-md" id="sign-up-btn">Sign Up</a>
                                         </div>
 
                                     </div>
@@ -131,7 +131,7 @@
 
 
 
-        <section id="service" class="service">
+        <section id="about" class="service">
             <div class="container">
                 <div class="row">
                     <div class="main_service_area sections"> 
@@ -192,22 +192,99 @@
         </section>
 
 
-        <section id="choose" class="choose">
+        <section id="schedule" class="schedule">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="main_choose_area sections">
-                        <div class="col-sm-7 col-sm-offset-1">
-                            <div class="main_choose_content text-left">
-                                <div class="single_choose_content">
-                                    <h1>Exceptional Customer Service</h1>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                                        sed do eiusmod tempor Lorem ipsum dolor sit amet
-                                        consectetur adipiscing elit.</p>
-
-                                    <a href="" class="btn btn-larg">Need to help? lets Chat <i class="lnr lnr-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="main_schedule_area sections">
+                        <h2 style="text-align:center;color:#efefef;">
+                            Schedule
+                        </h2>
+						<div class="row">
+							<div class="col-sm-offset-1 col-sm-5 col-xs-12 schedule-container">
+								<ul>
+									<li class="schedule-item">
+										<h3>
+											Saturday
+										</h3>
+									</li>
+									<li class="schedule-item">
+										<div class="schedule-time">
+											11:00
+										</div>
+										Check In Starts
+									</li>
+									<li class="schedule-item">
+										<div class="schedule-time">
+											12:30
+										</div>
+										Opening Ceremony
+									</li>
+									<li class="schedule-item">
+										<div class="schedule-time">
+											1:00
+										</div>
+										Hacking Begins
+									</li>
+									<li class="schedule-item">
+										<div class="schedule-time">
+											5:00
+										</div>
+										Dinner
+									</li>
+									<li class="schedule-item">
+										<div class="schedule-time">
+											11:59
+										</div>
+										Midnight Snack
+									</li>
+								</ul>
+							</div>
+							<div class="col-sm-5 col-xs-12 schedule-container">
+								<ul>
+									<li class="schedule-item">
+										<h3>
+											Sunday
+										</h3>
+									</li>
+									<li class="schedule-item">
+										<div class="schedule-time">
+											8:00
+										</div>
+										Breakfast
+									</li>
+									<li class="schedule-item">
+										<div class="schedule-time">
+											11:30
+										</div>
+										Devpost
+									</li>
+									<li class="schedule-item">
+										<div class="schedule-time">
+											12:30
+										</div>
+										Lunch
+									</li>
+									<li class="schedule-item">
+										<div class="schedule-time">
+											1:00
+										</div>
+										Exhibit
+									</li>
+									<li class="schedule-item">
+										<div class="schedule-time">
+											2:30
+										</div>
+										Demos
+									</li>
+									<li class="schedule-item">
+										<div class="schedule-time">
+											3:00
+										</div>
+										Closing Ceremony
+									</li>
+								</ul>
+							</div>
+						</div>
                     </div>
                 </div>
             </div>
@@ -239,8 +316,10 @@
                                     <img src="assets/images/pf1.jpg" alt="" />
                                     <div class="mixi_portfolio_overlay">
                                         <div class="overflow_hover_text"> 
+                                            <!--
                                             <a href=""><i class="lnr lnr-magnifier"></i></a>
                                             <a href=""><i class="lnr lnr-heart"></i></a>
+                                            -->
                                         </div>
                                     </div>
                                 </div>
@@ -250,8 +329,10 @@
                                     <img src="assets/images/pf2.jpg" alt="" />
                                     <div class="mixi_portfolio_overlay">
                                         <div class="overflow_hover_text"> 
+                                            <!--
                                             <a href=""><i class="lnr lnr-magnifier"></i></a>
                                             <a href=""><i class="lnr lnr-heart"></i></a>
+                                            -->
                                         </div>
                                     </div>
                                 </div>
@@ -261,8 +342,10 @@
                                     <img src="assets/images/pf3.jpg" alt="" />
                                     <div class="mixi_portfolio_overlay">
                                         <div class="overflow_hover_text"> 
+                                            <!--
                                             <a href=""><i class="lnr lnr-magnifier"></i></a>
                                             <a href=""><i class="lnr lnr-heart"></i></a>
+                                            -->
                                         </div>
                                     </div>
                                 </div>
@@ -272,8 +355,10 @@
                                     <img src="assets/images/pf4.jpg" alt="" />
                                     <div class="mixi_portfolio_overlay">
                                         <div class="overflow_hover_text"> 
+                                            <!--
                                             <a href=""><i class="lnr lnr-magnifier"></i></a>
                                             <a href=""><i class="lnr lnr-heart"></i></a>
+                                            -->
                                         </div>
                                     </div>
                                 </div>
@@ -283,8 +368,10 @@
                                     <img src="assets/images/pf5.jpg" alt="" />
                                     <div class="mixi_portfolio_overlay">
                                         <div class="overflow_hover_text"> 
+                                            <!--
                                             <a href=""><i class="lnr lnr-magnifier"></i></a>
                                             <a href=""><i class="lnr lnr-heart"></i></a>
+                                            -->
                                         </div>
                                     </div>
                                 </div>
@@ -294,8 +381,10 @@
                                     <img src="assets/images/pf6.jpg" alt="" />
                                     <div class="mixi_portfolio_overlay">
                                         <div class="overflow_hover_text"> 
+                                            <!--
                                             <a href=""><i class="lnr lnr-magnifier"></i></a>
                                             <a href=""><i class="lnr lnr-heart"></i></a>
+                                            -->
                                         </div>
                                     </div>
                                 </div>
@@ -305,8 +394,10 @@
                                     <img src="assets/images/pf7.jpg" alt="" />
                                     <div class="mixi_portfolio_overlay">
                                         <div class="overflow_hover_text"> 
+                                            <!--
                                             <a href=""><i class="lnr lnr-magnifier"></i></a>
                                             <a href=""><i class="lnr lnr-heart"></i></a>
+                                            -->
                                         </div>
                                     </div>
                                 </div>
@@ -316,8 +407,10 @@
                                     <img src="assets/images/pf7.jpg" alt="" />
                                     <div class="mixi_portfolio_overlay">
                                         <div class="overflow_hover_text"> 
+                                            <!--
                                             <a href=""><i class="lnr lnr-magnifier"></i></a>
                                             <a href=""><i class="lnr lnr-heart"></i></a>
+                                            -->
                                         </div>
                                     </div>
                                 </div>
@@ -381,6 +474,7 @@
             <div class="container">
                 <div class="row">
                     <div class="main_contact sections">
+                    <!--
                         <div class="head_title text-center">
                             <h2>Contact</h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
@@ -388,12 +482,10 @@
 
                         <div class="row">
                             <div class="contact_contant">
-
                                 <div class="col-sm-6 col-xs-12">
                                     <h4>Leave A Message</h4>
                                     <div class="single_contant_left">
                                         <form action="#" id="formid">
-                                            <!--<div class="col-lg-8 col-md-8 col-sm-10 col-lg-offset-2 col-md-offset-2 col-sm-offset-1">-->
 
                                             <div class="form-group">
                                                 <input type="text" class="form-control" name="name" placeholder="first name" required="">
@@ -410,25 +502,24 @@
                                             <div class="">
                                                 <input type="submit" value="Send" class="btn btn-primary">
                                             </div>
-                                            <!--</div>--> 
                                         </form>
                                     </div>
                                 </div>
-
-
+-->
+<!--
                                 <div class="col-sm-5 col-sm-offset-1 col-xs-12">
                                     <div class="single_message_right_info">
                                         <h4>Address :</h4>
                                         <ul>
                                             <li><a href=""><i class="fa fa-home"></i> One UTSA Circle, San Antonio, TX</a></li>
                                             <li><a href=""><i class="fa fa-phone"></i> ...</a></li>
-
                                             <li><a href=""><i class="fa fa-envelope"></i> team@rowdyhacks.org</a></li>
                                         </ul>
                                     </div>
                                 </div>
-                            </div> <!-- End of messsage contant-->
+                            </div>
                         </div>
+                        -->
                     </div>
                 </div>
             </div>
@@ -451,13 +542,10 @@
 
                         <div class="col-sm-6 col-xs-12">
                             <div class="footer_socail">
-                                <a href=""><i class="fa fa-facebook"></i></a>
-                                <a href=""><i class="fa fa-twitter"></i></a>
-                                <a href=""><i class="fa fa-google-plus"></i></a>
-                                <a href=""><i class="fa fa-rss"></i></a>
-                                <a href=""><i class="fa fa-instagram"></i></a>
-                                <a href=""><i class="fa fa-dribbble"></i></a>
-                                <a href=""><i class="fa fa-behance"></i></a>
+                                <a href="https://www.facebook.com/rowdyhacks/" title="Facebook"><i class="fa fa-facebook"></i></a>
+                                <a href="https://twitter.com/RowdyHacks" title="Twitter"><i class="fa fa-twitter"></i></a>
+                                <a href="" title="Slack"><i class="fa fa-slack"></i></a>
+                                <a href="mailto:team@rowdyhacks.org" title="Email"><i class="fa fa-envelope"></i></a>
                             </div>
                         </div>
                     </div>
