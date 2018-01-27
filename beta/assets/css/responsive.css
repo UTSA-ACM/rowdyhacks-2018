@@ -55,7 +55,7 @@ Author URI: http://www.bootstrapthemes.co
 /* Landscape phones and portrait tablets */
 @media  (max-width: 768px) {
     html {
-        font-size: 80%;
+        font-size: 87.5%;
     }
     .navbar-default .navbar-collapse, .navbar-default .navbar-form {
         border-color: transparent;
@@ -94,7 +94,7 @@ Author URI: http://www.bootstrapthemes.co
 /* Landscape phones and smaller */
 @media (max-width: 479px) {
     html {
-        font-size: 65%;
+        font-size: 85%;
     }
     .form-control {
         margin-bottom: 10px;
@@ -116,7 +116,7 @@ Author URI: http://www.bootstrapthemes.co
 
 
     html {
-        font-size: 60.5%;
+        font-size: 82.5%;
     }
     .form-control {
         margin-bottom: 10px;
