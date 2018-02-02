@@ -1022,10 +1022,66 @@ input::-ms-input-placeholder {
      color: #202020;
      margin: 35px 10px;
 }
+
 .faq-item h3 {
      border-style: none none solid none;
      border-width: 4px;
      border-color: #d55c04;
      margin: 5px 0px 20px 0px;
      padding: 0px 0px 10px 0px;
+}
+
+.mix {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    -webkit-transition: all 200ms ease-in-out;
+    -moz-transition: all 200ms ease-in-out;
+    transition: all 200ms ease-in-out;
+    overflow: visible;
+}
+.mix:hover {
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(0%);
+    
+}
+
+.mix div {
+    -webkit-transition: all 200ms ease-in-out;
+    -moz-transition: all 200ms ease-in-out;
+    transition: all 200ms ease-in-out;
+    margin: 10px;
+    max-width: 100vh;
+    max-height: 100vh;
+    width: calc(100% - 40px);
+    height: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position:relative;
+    top: 0px;
+    left: 0px;
+}
+
+.mix div:hover {
+    height: 220px;
+    width: calc(100% + 20px);
+    margin: 0px 0px 0px 20px;
+    top: 0px;
+    left: -40px;
+}
+
+@media (max-width: 767px) {
+    .mix {
+        -webkit-filter: grayscale(0%);
+        filter: grayscale(0%);
+    }
+}
+
+#mixcontent div a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#mixcontent, .mixcontent, #mixcontent div, #mixcontent div a div, #mixcontent div a div div {
+    overflow: visible;
 }

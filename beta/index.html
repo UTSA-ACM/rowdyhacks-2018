@@ -9,7 +9,9 @@
         <title>RowdyHacks</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/favicon.png">
+        <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
 
 
         <link rel="stylesheet" href="assets/css/fonticons.css">
@@ -26,6 +28,8 @@
 
         <!--Theme Responsive css-->
         <link rel="stylesheet" href="assets/css/responsive.css" />
+        
+        <link href="https://fonts.googleapis.com/css?family=Yellowtail" rel="stylesheet">
 
         <script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -45,6 +49,28 @@
                         }
                     }
                 });
+                var keystrokes = "";
+                document.onkeypress = function (e) {
+                    console.log(keystrokes);
+                    e = e || window.event;
+                    var charCode = (typeof e.which == "number") ? e.which : e.keyCode;
+                    if (charCode > 0) {
+                        keystrokes += String.fromCharCode(charCode);
+                    }
+                    var keywords = ["rowdy", "roadrunner", "coyote", "bird"];
+                    var index = -1;
+                    keywords.forEach(function(keyword){
+                        index = Math.max(index, keystrokes.indexOf(keyword));
+                    });
+                    if(index >= 0){
+                        keystrokes = "";
+                        var d = window.outerWidth+900
+                        $("#rowdy").animate({left: "+="+d}, d*2);
+                        window.setTimeout(function(){
+                            document.getElementById("rowdy").style.left="-600px";
+                        }, d*2);
+                    }
+                };
             });
         </script>
     </head>
@@ -52,7 +78,8 @@
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-
+        
+        <img src="assets/images/rowdy.gif" id="rowdy" style="position:fixed;top:50vh;width:600px;left:-600px;z-index:100000" />
         <header id="main_menu" class="header navbar-fixed-top" style="overflow;none;">
             <div class="main_menu_bg">
                 <div class="container">
@@ -69,7 +96,10 @@
                                             <span class="icon-bar"></span>
                                         </button>
                                         <a class="navbar-brand" href="#home">
-                                            <img src="assets/images/logo.png"/>
+                                            <!--<img src="assets/images/logo.png"/>-->
+                                            <div style="display:inline-block;font-family:YellowTail;font-size:24px;position:relative;top:-3px;color:#fefefe;">
+                                                RowdyHacks
+                                            </div>
                                         </a>
                                     </div>
 
@@ -79,17 +109,17 @@
 
                                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                         <ul class="nav navbar-nav navbar-right">
-                                            <li><a href="#home" onclick="scrollToTop(0px)">Home</a></li>
+                                            <li><a href="#home">Home</a></li>
                                             <li><a href="#about">About</a></li>
                                             <li><a href="#schedule">Schedule</a></li>
                                             <li><a href="#sponsors">Sponsors</a></li>
                                             <li><a href="#faq">FAQ</a></li>
-                                        </ul>    
+                                        </ul>
                                     </div>
 
                                 </div>
                             </nav>
-                        </div>	
+                        </div>
                     </div>
 
                 </div>
@@ -111,9 +141,11 @@
                                         <h1><div style="font-family:yellowtail;display:inline;">RowdyHacks</div><br />2018</h1>
                                         <p class="subtitle">San Antonio, TX</p>
 
+                                        <!--
                                         <div class="home_btn">
                                             <a href="" class="btn btn-md" id="sign-up-btn">Sign Up</a>
                                         </div>
+                                        -->
 
                                     </div>
                                 </div>
@@ -141,7 +173,7 @@
                             <div class="single_about_right">
                                 <div class="single_about">
                                     <div class="single_about_icon">
-                                        <div style="border-style:solid;border-sidth:5px;border-color:#202020;color:#202020;padding:1px 10px;border-radius:100px;display:inline-block;">i</div>
+                                        <div style="border-style:solid;border-sidth:5px;border-color:#202020;color:#202020;padding:1px 10px;border-radius:100px;display:inline-block;width:29px;height:29px;text-align:center;"><b>i</b></div>
                                     </div>
                                     <div class="single_about_content">
                                         <h3><div style="display:inline;font-family:yellowtail;">RowdyHacks</div></h2></h3>
@@ -305,119 +337,75 @@
                         <div class="main_mix_menu">
                             <ul>
                                 <li class="btn btn-primary filter" data-filter="all">All</li>
-                                <li class="btn btn-primary filter" data-filter=".cat1">Bronze</li>
+                                <li class="btn btn-primary filter" data-filter=".cat1">Gold</li>
                                 <li class="btn btn-primary filter" data-filter=".cat2">Silver</li>
-                                <li class="btn btn-primary filter" data-filter=".cat3">Gold</li>
-                                <li class="btn btn-primary filter" data-filter=".cat4">Platinum</li>
+                                <li class="btn btn-primary filter" data-filter=".cat3">Bronze</li>
+                                <li class="btn btn-primary filter" data-filter=".cat4">Partners</li>
                             </ul>
                         </div>
 
-                        <div id="mixcontent" class="mixcontent">
-                            <div class="col-md-3 mix cat1 no-padding">
-                                <div class="single_mixi_portfolio">
-                                    <img src="assets/images/pf1.jpg" alt="" />
-                                    <div class="mixi_portfolio_overlay">
-                                        <div class="overflow_hover_text"> 
-                                            <!--
-                                            <a href=""><i class="lnr lnr-magnifier"></i></a>
-                                            <a href=""><i class="lnr lnr-heart"></i></a>
-                                            -->
+                        <div id="mixcontent" class="mixcontent" style="overflow:visible;">
+                            <div class="row">
+                                <a href="https://www.motiva.com/">
+                                    <div class="col-md-3 mix cat3 no-padding">
+                                        <div style="background-image:url('assets/images/motiva.png');">
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="https://www.afciviliancareers.com/">
+                                    <div class="col-md-3 mix cat1 no-padding">
+                                        <div style="background-image:url('assets/images/usaf.png');">
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="https://www.coxautoinc.com/">
+                                    <div class="col-md-3 mix cat1 no-padding">
+                                        <div style="background-image:url('assets/images/cox.png');">
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="https://www.infosys.com/">
+                                    <div class="col-md-3 mix cat3 no-padding">
+                                        <div style="background-image:url('assets/images/infosys.png');">
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="row">
+                                <a href="http://geekdom.com/">
+                                    <div class="col-md-3 mix cat4 no-padding">
+                                        <div style="background-image:url('assets/images/geekdom.png');">
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="http://usaa.com">
+                                    <div class="col-md-3 mix cat2 no-padding">
+                                        <div style="background-image:url('assets/images/usaa.png');">
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="http://acm-utsa.org/">
+                                    <div class="col-md-3 mix cat4 no-padding">
+                                        <div style="background-image:url('assets/images/acm.png');">
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!--
+                            <a href="http://geekdom.com/">
+                                <div class="col-md-3 mix cat4 no-padding">
+                                    <div class="single_mixi_portfolio">
+                                        <img src="assets/images/geekdom.png" alt="" />
+                                        <div class="mixi_portfolio_overlay">
+                                            <div class="overflow_hover_text"> 
+                                                <a href=""><i class="lnr lnr-magnifier"></i></a>
+                                                <a href=""><i class="lnr lnr-heart"></i></a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-md-3 mix cat2 no-padding">
-                                <div class="single_mixi_portfolio">
-                                    <img src="assets/images/pf2.jpg" alt="" />
-                                    <div class="mixi_portfolio_overlay">
-                                        <div class="overflow_hover_text"> 
-                                            <!--
-                                            <a href=""><i class="lnr lnr-magnifier"></i></a>
-                                            <a href=""><i class="lnr lnr-heart"></i></a>
-                                            -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 mix cat1 cat4 no-padding">
-                                <div class="single_mixi_portfolio">
-                                    <img src="assets/images/pf3.jpg" alt="" />
-                                    <div class="mixi_portfolio_overlay">
-                                        <div class="overflow_hover_text"> 
-                                            <!--
-                                            <a href=""><i class="lnr lnr-magnifier"></i></a>
-                                            <a href=""><i class="lnr lnr-heart"></i></a>
-                                            -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 mix cat3 cat4 no-padding">
-                                <div class="single_mixi_portfolio">
-                                    <img src="assets/images/pf4.jpg" alt="" />
-                                    <div class="mixi_portfolio_overlay">
-                                        <div class="overflow_hover_text"> 
-                                            <!--
-                                            <a href=""><i class="lnr lnr-magnifier"></i></a>
-                                            <a href=""><i class="lnr lnr-heart"></i></a>
-                                            -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 mix cat4 no-padding">
-                                <div class="single_mixi_portfolio">
-                                    <img src="assets/images/pf5.jpg" alt="" />
-                                    <div class="mixi_portfolio_overlay">
-                                        <div class="overflow_hover_text"> 
-                                            <!--
-                                            <a href=""><i class="lnr lnr-magnifier"></i></a>
-                                            <a href=""><i class="lnr lnr-heart"></i></a>
-                                            -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 mix cat1 cat2 no-padding">
-                                <div class="single_mixi_portfolio">
-                                    <img src="assets/images/pf6.jpg" alt="" />
-                                    <div class="mixi_portfolio_overlay">
-                                        <div class="overflow_hover_text"> 
-                                            <!--
-                                            <a href=""><i class="lnr lnr-magnifier"></i></a>
-                                            <a href=""><i class="lnr lnr-heart"></i></a>
-                                            -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 mix cat1 cat2 no-padding">
-                                <div class="single_mixi_portfolio">
-                                    <img src="assets/images/pf7.jpg" alt="" />
-                                    <div class="mixi_portfolio_overlay">
-                                        <div class="overflow_hover_text"> 
-                                            <!--
-                                            <a href=""><i class="lnr lnr-magnifier"></i></a>
-                                            <a href=""><i class="lnr lnr-heart"></i></a>
-                                            -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 mix cat1 cat2 no-padding">
-                                <div class="single_mixi_portfolio">
-                                    <img src="assets/images/pf7.jpg" alt="" />
-                                    <div class="mixi_portfolio_overlay">
-                                        <div class="overflow_hover_text"> 
-                                            <!--
-                                            <a href=""><i class="lnr lnr-magnifier"></i></a>
-                                            <a href=""><i class="lnr lnr-heart"></i></a>
-                                            -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
+                            </a>
+                            -->
                             <div class="gap"></div>
                         </div>
                     </div>                     
@@ -594,6 +582,26 @@
                     </div>
                 </div>
             </div>
+        </section>
+        
+        <section id="location" style="background-color:#0c2340;color:#fefefe;">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="sections">
+                        <h2 style="text-align:center;">
+                            Location
+                        </h2>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <p style="text-align:center;padding:10px 9%;">
+                                    RowdyHacks 2018 will be held at Geekdom in downtown San Antonio. Although RowdyHacks has previously been hosted at UTSA, this year it will be closer to the heart of San Antonio's technology and start-up communities, making it easier for students and industry professionals to meet and see each other's work.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13900.345065130385!2d-98.493509!3d29.426275!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9584ae946a1e0d61!2sGeekdom!5e0!3m2!1sen!2sus!4v1517372280879" style="width:100vw;height:400px;" frameborder="0" style="border:0" allowfullscreen></iframe>
         </section>
 
 
