@@ -100,7 +100,14 @@ jQuery(document).ready(function ($) {
 
 //    $('#menu').slicknav();
 
-    $('#mixcontent').mixItUp({
+    $('#mixcontent-desktop').mixItUp({
+        animation: {
+            animateResizeContainer: false,
+            effects: 'fade rotateX(-45deg) translateY(-10%)'
+        }
+    });
+    
+    $('#mixcontent-mobile').mixItUp({
         animation: {
             animateResizeContainer: false,
             effects: 'fade rotateX(-45deg) translateY(-10%)'

@@ -984,7 +984,7 @@ input::-ms-input-placeholder {
     text-align: left;
 }
 
-.schedule-container ul {
+.schedule-container > ul {
     padding: 20px;
     margin: 10px;
     background-color: rgba(254, 254, 254, 1.0);
@@ -993,7 +993,7 @@ input::-ms-input-placeholder {
 }
 
 @media (max-width: 767px) {
-    .schedule-container ul {
+    .schedule-container > ul {
         padding: 20px;
         margin: 10px 0px 10px 0px;
         border-radius: 0px;
@@ -1017,18 +1017,25 @@ input::-ms-input-placeholder {
 
 
 .faq-item {
-     background-color:#fefefe;
+     background-color: #FEFEFE;
      padding: 25px;
      color: #202020;
      margin: 35px 10px;
 }
 
-.faq-item h3 {
+.faq-item > h3 {
      border-style: none none solid none;
      border-width: 4px;
      border-color: #d55c04;
      margin: 5px 0px 20px 0px;
      padding: 0px 0px 10px 0px;
+}
+
+@media (max-width: 419px) {
+    .faq-item {
+        background-color: #EFEFEF;
+         margin: 35px -10px;
+    }
 }
 
 .mix {
@@ -1039,13 +1046,12 @@ input::-ms-input-placeholder {
     transition: all 200ms ease-in-out;
     overflow: visible;
 }
-.mix:hover {
+.mix:hover, .mix:focus {
     -webkit-filter: grayscale(0%);
     filter: grayscale(0%);
-    
 }
 
-.mix div {
+.mix > div {
     -webkit-transition: all 200ms ease-in-out;
     -moz-transition: all 200ms ease-in-out;
     transition: all 200ms ease-in-out;
@@ -1053,35 +1059,119 @@ input::-ms-input-placeholder {
     max-width: 100vh;
     max-height: 100vh;
     width: calc(100% - 40px);
-    height: 200px;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    position:relative;
-    top: 0px;
-    left: 0px;
+    position: relative;
+    padding: 10px;
 }
 
-.mix div:hover {
-    height: 220px;
-    width: calc(100% + 20px);
-    margin: 0px 0px 0px 20px;
+.mix > .mix-logo {
     top: 0px;
-    left: -40px;
+    left: 0px;
+    height: 200px;
+}
+
+#mixcontent-desktop {
+    display: none;
+}
+
+#mixcontent-mobile {
+    display: inherit;
+}
+
+@media (min-width: 768px) {
+    .mix > .mix-logo:hover {
+        height: 220px;
+        width: calc(100% + 20px);
+        margin: 0px 0px 0px 20px;
+        top: 0px;
+        left: -40px;
+    }
+    #mixcontent-desktop {
+        display: inherit;
+    }
+    #mixcontent-mobile {
+        display: none;
+    }
 }
 
 @media (max-width: 767px) {
+    .mix > div {
+        width: calc(100vw - 40px);
+    }
+    #mixcontent-mobile .mix > div {
+        height: 200px;
+    }
     .mix {
         -webkit-filter: grayscale(0%);
         filter: grayscale(0%);
     }
 }
 
-#mixcontent div a {
+#mixcontent-desktop > div > a, #mixcontent-mobile > div > a {
     text-decoration: none;
     color: inherit;
 }
 
-#mixcontent, .mixcontent, #mixcontent div, #mixcontent div a div, #mixcontent div a div div {
+#mixcontent-desktop, .mixcontent, #mixcontent-desktop > div, #mixcontent-desktop > div > a > div, #mixcontent-desktop > div > a > div > div {
     overflow: visible;
 }
+
+#mixcontent-desktop .mix {
+    height: 200px;
+    overflow: none;
+}
+
+.mix:hover {
+    min-height: 200px;
+    overflow: visible;
+}
+
+.mix-logo {
+    position: relative;
+    z-index: 5;
+}
+
+.mix-description {
+    position: relative;
+    top: -100px;
+    background-color: #0c2340;
+    color: #efefef;
+    width: inherit;
+    z-index: 10;
+    opacity: 0.0;
+    max-height: 0px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 32px -7px #000;
+}
+
+.mix-logo:hover + .mix-description {
+    position: relative;
+    opacity: 1.0;
+    top: 0px;
+    max-height: 1000px;
+}
+
+#mixcontent-desktop .mix {
+    overflow: visible;
+    max-height: 220px;
+}
+
+#mixcontent-desktop > .row {
+    position: relative;
+    z-index: 1;
+}
+
+#mixcontent-desktop > .row:hover {
+    z-index: 11;
+}
+
+
+
+
+
+
+
+
+
