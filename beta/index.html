@@ -131,6 +131,73 @@
     		$("#response-send").on("click", function(){
     		    send();
     		});
+    		var about_index = 0;
+    		window.interval = window.setInterval(function(){
+        		$("#about-"+(1 + about_index % 3)).fadeOut(200);
+        		$("#ab"+(1 + about_index % 3)).removeClass("active-bullet");
+        		about_index++;
+        		window.setTimeout(function(){
+            		$("#about-"+(1 + about_index % 3)).fadeIn(200);
+            		$("#ab"+(1 + about_index % 3)).addClass("active-bullet");
+            	}, 200);
+        	}, 12000);
+        	$("#ab1").on("click", function(){
+        		clearInterval(window.interval);
+        		$("#about-"+(1 + about_index % 3)).fadeOut(200);
+        		$("#ab"+(1 + about_index % 3)).removeClass("active-bullet");
+            	about_index = 0;
+        		window.setTimeout(function(){
+            		$("#about-"+(1 + about_index % 3)).fadeIn(200);
+            		$("#ab"+(1 + about_index % 3)).addClass("active-bullet");
+            	}, 200);
+        		window.interval = window.setInterval(function(){
+            		$("#about-"+(1 + about_index % 3)).fadeOut(200);
+            		$("#ab"+(1 + about_index % 3)).removeClass("active-bullet");
+            		about_index++;
+            		window.setTimeout(function(){
+                		$("#about-"+(1 + about_index % 3)).fadeIn(200);
+                		$("#ab"+(1 + about_index % 3)).addClass("active-bullet");
+                	}, 200);
+            	}, 12000);
+        	});
+        	$("#ab2").on("click", function(){
+        		clearInterval(window.interval);
+        		$("#about-"+(1 + about_index % 3)).fadeOut(200);
+        		$("#ab"+(1 + about_index % 3)).removeClass("active-bullet");
+            	about_index = 1;
+        		window.setTimeout(function(){
+            		$("#about-"+(1 + about_index % 3)).fadeIn(200);
+            		$("#ab"+(1 + about_index % 3)).addClass("active-bullet");
+            	}, 200);
+        		window.interval = window.setInterval(function(){
+            		$("#about-"+(1 + about_index % 3)).fadeOut(200);
+            		$("#ab"+(1 + about_index % 3)).removeClass("active-bullet");
+            		about_index++;
+            		window.setTimeout(function(){
+                		$("#about-"+(1 + about_index % 3)).fadeIn(200);
+                		$("#ab"+(1 + about_index % 3)).addClass("active-bullet");
+                	}, 200);
+            	}, 12000);
+        	});
+        	$("#ab3").on("click", function(){
+        		clearInterval(window.interval);
+        		$("#about-"+(1 + about_index % 3)).fadeOut(200);
+        		$("#ab"+(1 + about_index % 3)).removeClass("active-bullet");
+            	about_index = 2;
+        		window.setTimeout(function(){
+            		$("#about-"+(1 + about_index % 3)).fadeIn(200);
+            		$("#ab"+(1 + about_index % 3)).addClass("active-bullet");
+            	}, 200);
+        		window.interval = window.setInterval(function(){
+            		$("#about-"+(1 + about_index % 3)).fadeOut(200);
+            		$("#ab"+(1 + about_index % 3)).removeClass("active-bullet");
+            		about_index++;
+            		window.setTimeout(function(){
+                		$("#about-"+(1 + about_index % 3)).fadeIn(200);
+                		$("#ab"+(1 + about_index % 3)).addClass("active-bullet");
+                	}, 200);
+            	}, 12000);
+        	});
 		});
 		var recognition;
 		function startRecognition() {
@@ -203,7 +270,7 @@
 		    }
 		    console.log("uh"+val);
 		    var response = JSON.parse(val);
-			$("#response").append("<div class=\"response-answer-container\"><div class=\"response-item response-answer\">"+response.result.fulfillment.messages[0].speech+"</div></div>");
+			$("#response").append("<div class=\"response-answer-container\"><div class=\"response-item response-answer\">"+response.result.fulfillment.messages[0].speech.encodeLinks()+"</div></div>");
 			if($("#response").outerHeight() >= 300){
 			    $("#response").addClass("response-overflow");
 			    $("#response-title").css("box-shadow", "0px 20px 20px -21px #000000");
@@ -294,7 +361,7 @@
 	        height: 40px;
 	        border-radius: 100px;
 	        border-style: solid;
-	        border-color: #CFCFCF;
+	        border-color: #696969;
 	        border-width: 1px;
 	        margin: 8px 8px 0px 8px;
 	    }
@@ -381,11 +448,9 @@
                                     <div class="main_home" style="text-shadow:0px 1px 5px -1px #000000;">
                                         <h1><div style="font-family:yellowtail;display:inline;">RowdyHacks</div><br />2018</h1>
                                         <p class="subtitle">San Antonio, TX</p>
-                                        <!--
                                         <div class="home_btn">
-                                            <a href="" class="btn btn-md" id="sign-up-btn">Sign Up</a>
+                                            <a href="" class="btn btn-md" id="sign-up-btn">Sign Up opens Feb. 26</a>
                                         </div>
-                                        -->
                                     </div>
                                 </div>
                             </div>
@@ -412,11 +477,36 @@
                             <div class="single_about_right">
                                 <div class="single_about">
                                     <div class="single_about_icon">
-                                        <div style="border-style:solid;border-sidth:5px;border-color:#202020;color:#202020;padding:1px 10px;border-radius:100px;display:inline-block;width:29px;height:29px;text-align:center;"><b>i</b></div>
+                                        <!--<div style="border-style:solid;border-sidth:5px;border-color:#202020;color:#202020;padding:1px 10px;border-radius:100px;display:inline-block;width:29px;height:29px;text-align:center;"><b>i</b></div>-->
                                     </div>
-                                    <div class="single_about_content">
-                                        <h3><div style="display:inline;font-family:yellowtail;">RowdyHacks</div></h2></h3>
-                                        <p>RowdyHacks is a 24-hour competitive programming event in which teams of students work together to “hack” together a website, app, or tool. RowdyHacks is for everyone: whether you’ve never written a line of code or you’re a seasoned programmer, the most important thing is to learn something new and have fun!</p>
+                                    <div class="single_about_content" style="padding:10px;">
+                                        <h3 style="display:inline;font-family:yellowtail;font-size:48px;margin:20px;">
+                                            RowdyHacks
+                                        </h3>
+                                        <br />
+                                        <br />
+                                        <div style="height:250px;">
+                                            <p id="about-1">
+                                                RowdyHacks is a 24-hour competitive programming event in which teams of students work together to “hack” together a website, app, or tool. RowdyHacks is for everyone: whether you’ve never written a line of code or you’re a seasoned programmer, the most important thing is to learn something new and have fun!
+                                            </p>
+                                            <p id="about-2" style="display:none;">
+                                                RowdyHacks started in 2016 as a small, student-led hackathon sponsored by the Association of Computing Machinery at UTSA. Thanks to contributions from the Department of Computer Science at UTSA, the event has continued to grow bigger in size. This year RowdyHacks is expanding, as we welcome students from other San Antonio Universities and head to Downtown San Antonio for the first time.
+                                            </p>
+                                            <p id="about-3" style="display:none;">
+                                                RowdyHacks 2018 is going to be our best event yet! We are switching things up this year, and there’s a lot to look forward to. Hosted out of Geekdom’s downtown San Antonio offices, we are excited to bring you plenty of workshops, great music and food, swag bags and t-shirts, and of course, fantastic prizes! Register starting February 26 to secure your spot at RowdyHacks 2018!
+                                            </p>
+                                        </div>
+                                        <div class="about-bullet-container">
+                                            <div class="about-bullet active-bullet" id="ab1">
+                                                •
+                                            </div>
+                                            <div class="about-bullet" id="ab2">
+                                                •
+                                            </div>
+                                            <div class="about-bullet" id="ab3">
+                                                •
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <!--
@@ -479,33 +569,39 @@
 									</li>
 									<li class="schedule-item">
 										<div class="schedule-time">
-											11:00
+											10:00
 										</div>
-										Check In Starts
+										Check In Opens
 									</li>
 									<li class="schedule-item">
 										<div class="schedule-time">
-											12:30
+											12:00
 										</div>
 										Opening Ceremony
 									</li>
 									<li class="schedule-item">
 										<div class="schedule-time">
-											1:00
+											1:30
 										</div>
 										Hacking Begins
 									</li>
 									<li class="schedule-item">
 										<div class="schedule-time">
-											5:00
+											2:00 - 5:00
+										</div>
+										Workshops
+									</li>
+									<li class="schedule-item">
+										<div class="schedule-time">
+											6:00
 										</div>
 										Dinner
 									</li>
 									<li class="schedule-item">
 										<div class="schedule-time">
-											11:59
+											7:00 - 9:00
 										</div>
-										Midnight Snack
+										Workshops
 									</li>
 								</ul>
 							</div>
@@ -521,39 +617,45 @@
 									</li>
 									<li class="schedule-item">
 										<div class="schedule-time">
+											12:00
+										</div>
+										Midnight Snack
+									</li>
+									<li class="schedule-item">
+										<div class="schedule-time">
 											8:00
 										</div>
 										Breakfast
 									</li>
 									<li class="schedule-item">
 										<div class="schedule-time">
-											11:30
+											10:30
 										</div>
-										Devpost
+										Project Submissions
 									</li>
 									<li class="schedule-item">
 										<div class="schedule-time">
-											12:30
+											11:00
 										</div>
-										Lunch
+										Demos and Judging
 									</li>
 									<li class="schedule-item">
 										<div class="schedule-time">
 											1:00
 										</div>
-										Exhibit
+										Lunch
 									</li>
 									<li class="schedule-item">
 										<div class="schedule-time">
-											2:30
+											2:00
 										</div>
-										Demos
+										Closing Ceremonies
 									</li>
 									<li class="schedule-item">
 										<div class="schedule-time">
 											3:00
 										</div>
-										Closing Ceremony
+										Goodbye!
 									</li>
 								</ul>
 							</div>
@@ -580,6 +682,7 @@
                                 <li class="btn btn-primary filter" data-filter=".cat1">Gold</li>
                                 <li class="btn btn-primary filter" data-filter=".cat2">Silver</li>
                                 <li class="btn btn-primary filter" data-filter=".cat3">Bronze</li>
+                                <li class="btn btn-primary filter" data-filter=".cat5">Partners</li>
                             </ul>
                         </div>
 
@@ -637,12 +740,12 @@
                                         <div class="mix-logo" style="background-image:url('assets/images/usaa.png');">
                                         </div>
                                         <div class="mix-description">
-                                            USAA is a silver sponsor.
+                                            The mission of the association is to facilitate the financial security of its members, associates, and their families through provision of a full range of highly competitive financial products and services; in so doing, usaa seeks to be the provider of choice for the military community.
                                         </div>
                                     </div>
                                 </a>
                                 <a href="http://acm-utsa.org/">
-                                    <div class="col-sm-3 hidden-xs-down mix no-padding">
+                                    <div class="col-sm-3 hidden-xs-down mix cat5 no-padding">
                                         <div class="mix-logo" style="background-image:url('assets/images/acm.png');">
                                         </div>
                                         <div class="mix-description">
@@ -650,10 +753,19 @@
                                         </div>
                                     </div>
                                 </a>
+                                <a href="http://acm-utsa.org/groups">
+                                    <div class="col-sm-3 hidden-xs-down mix cat5 no-padding">
+                                        <div class="mix-logo" style="background-image:url('assets/images/acm-w.png');">
+                                        </div>
+                                        <div class="mix-description">
+                                            ACM-W aims to create an engaging academic, professional, and social network for women and minorities in technology. Our purpose is to connect students with leaders and encourage them to pursue career opportunities in computing fields and to mentor for academic and professional success.
+                                        </div>
+                                    </div>
+                                </a>
                             </div>
                             <!--
                             <a href="http://geekdom.com/">
-                                <div class="col-md-3 mix cat4 no-padding">
+                                <div class="col-md-3 mix cat5 no-padding">
                                     <div class="single_mixi_portfolio">
                                         <img src="assets/images/geekdom.png" alt="" />
                                         <div class="mixi_portfolio_overlay">
@@ -701,11 +813,17 @@
                                     <div class="col-xs-12 hidden-sm-up mix cat3 no-padding">
                                         <div style="background-image:url('assets/images/infosys.png');">
                                         </div>
+                                        <div>
+                                            Infosys is a bronze sponsor.
+                                        </div>
                                     </div>
                                 </a>
                                 <a href="http://geekdom.com/">
                                     <div class="col-xs-12 hidden-sm-up mix cat0 no-padding">
                                         <div style="background-image:url('assets/images/geekdom.png');">
+                                        </div>
+                                        <div>
+                                            Geekdom is a platinum sponsor.
                                         </div>
                                     </div>
                                 </a>
@@ -713,14 +831,26 @@
                                     <div class="hidden-sm-up col-xs-12 mix cat2 no-padding">
                                         <div style="background-image:url('assets/images/usaa.png');">
                                         </div>
+                                        <div>
+                                            The mission of the association is to facilitate the financial security of its members, associates, and their families through provision of a full range of highly competitive financial products and services; in so doing, usaa seeks to be the provider of choice for the military community.
+                                        </div>
                                     </div>
                                 </a>
                                 <a href="http://acm-utsa.org/">
-                                    <div class="col-xs-12 hidden-sm-up mix cat4 no-padding">
+                                    <div class="col-xs-12 hidden-sm-up mix cat5 no-padding">
                                         <div style="background-image:url('assets/images/acm.png');">
                                         </div>
                                         <div>
                                             ACM UTSA is the host of RowdyHacks and a student run non-profit at UTSA, dedicated to helping students grow and learn more about technology and industry.
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="http://acm-utsa.org/groups">
+                                    <div class="col-xs-12 hidden-sm-up mix cat5 no-padding">
+                                        <div style="background-image:url('assets/images/acm-w.png');">
+                                        </div>
+                                        <div>
+                                            ACM-W aims to create an engaging academic, professional, and social network for women and minorities in technology. Our purpose is to connect students with leaders and encourage them to pursue career opportunities in computing fields and to mentor for academic and professional success.
                                         </div>
                                     </div>
                                 </a>
@@ -730,81 +860,6 @@
                 </div>
             </div>
         </section> <!-- End of portfolio two Section -->        
-
-        <!--
-        <section id="volunteers" class="portfolio">
-            <div class="container">
-                <div class="row">
-                    <div class="main_mix_content text-center sections">
-                        <div class="head_title">
-                            <h2>Sponsors</h2>
-                        </div>
-                        <div class="main_mix_menu">
-                            <ul>
-                                <li class="btn btn-primary filter" data-filter="all">All</li>
-                                <li class="btn btn-primary filter" data-filter=".cat1">Gold</li>
-                                <li class="btn btn-primary filter" data-filter=".cat2">Silver</li>
-                                <li class="btn btn-primary filter" data-filter=".cat3">Bronze</li>
-                                <li class="btn btn-primary filter" data-filter=".cat4">Partners</li>
-                            </ul>
-                        </div>
-
-                        <div id="mixcontent" class="mixcontent" style="overflow:visible;">
-                            <div class="row">
-                                <a href="https://www.motiva.com/">
-                                    <div class="col-md-3 mix cat3 no-padding">
-                                        <div style="background-image:url('assets/images/motiva.png');">
-                                        </div>
-                                    </div>
-                                </a>
-                                <a href="https://www.afciviliancareers.com/">
-                                    <div class="col-md-3 mix cat1 no-padding">
-                                        <div style="background-image:url('assets/images/usaf.png');">
-                                        </div>
-                                    </div>
-                                </a>
-                                <a href="https://www.coxautoinc.com/">
-                                    <div class="col-md-3 mix cat1 no-padding">
-                                        <div style="background-image:url('assets/images/cox.png');">
-                                        </div>
-                                    </div>
-                                </a>
-                                <a href="https://www.infosys.com/">
-                                    <div class="col-md-3 mix cat3 no-padding">
-                                        <div style="background-image:url('assets/images/infosys.png');">
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="row">
-                                <a href="http://geekdom.com/">
-                                    <div class="col-md-3 mix cat4 no-padding">
-                                        <div style="background-image:url('assets/images/geekdom.png');">
-                                        </div>
-                                    </div>
-                                </a>
-                                <a href="http://usaa.com">
-                                    <div class="col-md-3 mix cat2 no-padding">
-                                        <div style="background-image:url('assets/images/usaa.png');">
-                                        </div>
-                                    </div>
-                                </a>
-                                <a href="http://acm-utsa.org/">
-                                    <div class="col-md-3 mix cat4 no-padding">
-                                        <div style="background-image:url('assets/images/acm.png');">
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="gap"></div>
-                        </div>
-                    </div>                     
-                </div>
-            </div>
-        </section>
-        -->      
-
-
 
 
         <section id="counter" class="counter">
@@ -913,7 +968,7 @@
         										<h3>
         											What if I don’t know how to code?
         										</h3>
-        										That’s okay! RowdyHacks will have plenty of mentors and peers to help you learn. You don’t have to be an experienced coder to attend, and RowdyHacks is a great way to get into computer science!
+        										That’s okay! RowdyHacks will have plenty of mentors and peers to help you learn. You don’t have to be an experienced coder to attend, and RowdyHacks is a great way to get into technology!
         									</div>
         									<div class="faq-item">
         										<h3>
@@ -961,7 +1016,7 @@
         									</div>
         									<div id="response-container" class="faq-item">
                                         		<h3 id="response-title" style="margin: 5px 0px 0px 0px;">
-                                        		    Want to ask something else?
+                                        		    Have another question? Ask here.
                                         		</h3>
                                         		<div id="response">
                                         		    <div class="response-answer-container">
@@ -1015,6 +1070,49 @@
             </div>
         </section>
         
+
+        <section id="volunteers" class="portfolio">
+            <div class="container">
+                <div class="row">
+                    <div class="main_mix_content text-center sections">
+                        <div class="head_title">
+                            <h2>Volunteers</h2>
+                        </div>
+                    <div class="row volunteers-container">
+                            <div class="hidden-xs-down col-sm-2 col-md-3">
+                            </div>
+                            <a href="https://www.linkedin.com/in/cassidy-matousek/">
+                                <div class="col-xs-12 col-sm-4 col-md-3">
+                                    <div class="person-photo" style="background-image:url('assets/images/volunteers/cassidy.jpg');">
+                                    </div>
+                                    <h3>
+                                        Co-Chair
+                                        <br />
+                                        Cassidy Matousek
+                                    </h3>
+                                </div>
+                            </a>
+                            <a href="https://www.linkedin.com/in/jessicavle/">
+                                <div class="col-xs-12 col-sm-4 col-md-3">
+                                    <div class="person-photo" style="background-image:url('assets/images/volunteers/jessica.jpg');">
+                                    </div>
+                                    <h3>
+                                        Co-Chair
+                                        <br />
+                                        Jessica Le
+                                    </h3>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="gap"></div>
+                    </div>                     
+                </div>
+            </div>
+        </section>
+        <!---->
+
+
+
         <section id="location" style="background-color:#0c2340;color:#fefefe;">
             <div class="container-fluid">
                 <div class="row">
@@ -1025,7 +1123,10 @@
                         <div class="row">
                             <div class="col-sm-12">
                                 <p style="text-align:center;padding:10px 9%;">
-                                    RowdyHacks 2018 will be held at Geekdom in downtown San Antonio. Although RowdyHacks has previously been hosted at UTSA, this year it will be closer to the heart of San Antonio's technology and start-up communities, making it easier for students and industry professionals to meet and see each other's work.
+                                    RowdyHacks 2018 will be held at Geekdom in downtown San Antonio. Although RowdyHacks has previously been hosted at UTSA, this year it will be held downtown, closer to the heart of San Antonio's technology and start-up communities, making it easier for students and industry professionals to meet and see each other's work.
+                                        <br />
+                                        <br />
+                                        Parking is available on the street and in parking garages downtown. Transportation will be provided for UTSA students to and from the event. Details to be announced.
                                 </p>
                             </div>
                         </div>
@@ -1046,7 +1147,7 @@
 
                         <div class="col-sm-6 col-xs-12">
                             <div class="copyright_text">
-                                <p class=" wow fadeInRight" data-wow-duration="1s">Made with <i class="fa fa-heart"></i> by <a href="http://acm-utsa.org">ACM UTSA</a></p>
+                                <p class=" wow fadeInRight" data-wow-duration="1s">Made <!--with <i class="fa fa-heart"></i>--> by <a href="http://andrewhutton.me">Andrew Hutton</a> for <a href="http://acm-utsa.org">ACM UTSA</a></p>
                             </div>
                         </div>
 
