@@ -509,9 +509,9 @@ input::-ms-input-placeholder {
     -moz-transition:all .3s;
     transition:all .3s;
     height: 75px;
-
+    -webkit-backdrop-filter:blur(4px);
+    backdrop-filter: blur(4px);
 }
-
 
 .main_menu_bg{
     margin-top: 0px;
@@ -1173,42 +1173,6 @@ input::-ms-input-placeholder {
     z-index: 11;
 }
 
-.person-photo {
-    border-radius: 2000px;
-    min-height: 100px;
-    width: calc(100% - 30px);
-    max-width: 400px;
-    max-height: 400px;
-    padding: 0px;
-    margin: 15px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    /*margin-left: calc(50% - 15px);*/
-    padding-top: calc(50% - 15px);
-    padding-bottom: calc(50% - 15px);
-}
-
-@media (max-width: 767px) {
-    .person-photo {
-        width: calc(100% - 60px);
-        padding-top: calc(50% - 30px);
-        padding-bottom: calc(50% - 30px);
-    }
-    .person-photo + h3 {
-        font-size: 26px;
-    }
-}
-
-.volunteers-container > a > div {
-    /*
-    background-color: #efefef;
-    box-shadow: 0px 2px 12px -2px #000000;
-    /**/
-    margin: 10px;
-    padding: 10px;
-}
-
 .home_btn {
     margin-bottom: 30px;
 }
@@ -1239,24 +1203,169 @@ input::-ms-input-placeholder {
     text-shadow: 0px 0px 0px #000000;
 }
 
-#volunteers, .volunteers-container, .volunteers-container a {
-    background-color: #9c4505;
-    color: #efefef;
-    margin-top: -6px;
-}
-
 #location {
     background-color: #0c2340;
     color: #fefefe;
-    box-shadow: inset 0px 100px 600px -200px #ffffff;
+    box-shadow: inset 0px 400px 400px -400px #ffffff22;
 }
 #sign-up-btn {
     text-shadow: 0px 0px 0px #00000000;
 }
 
+#volunteers, .volunteers-container {
+    background-color: #9c4505;
+    color: #efefef;
+    margin-top: -6px;
+    text-align: center;
+}
+/*
+.person-photo {
+    border-radius: 2000px;
+    min-height: 100px;
+    width: calc(100% - 30px);
+    max-width: 400px;
+    max-height: 400px;
+    padding: 0px;
+    margin: 15px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: calc(50% - 15px);
+    padding-bottom: calc(50% - 15px);
+}
+
+@media (max-width: 767px) {
+    .person-photo {
+        width: calc(100% - 60px);
+        padding-top: calc(50% - 30px);
+        padding-bottom: calc(50% - 30px);
+    }
+    .person-photo + h3 {
+        font-size: 26px;
+    }
+}
+
+.volunteers-container > a > div {
+    margin: 10px;
+    padding: 10px;
+}
+
+*/
+
+.volunteers-container > a {
+    text-decoration: none;
+}
 
 
 
 
 
+.volunteer-card {
+	width: 260px;
+	height: 386px;
+	/*box-shadow: 0px 1px 15px -7px;*/
+	border-radius: 5px;
+	display: inline-block;
+	padding: 20px;
+	text-align: center;
+	/*
+	box-shadow: 0px 1px 11px -3px;
+	border-radius: 3px;
+	background-color: #ffffff;
+	*/
+	margin: 10px;
+	border-radius: 3px;
+	background-color: #efefefef;
+	box-shadow: 0px 1px 11px -3px;
+	color: #323232;
+	clear: all;
+}
+
+.volunteer-card-photo-container {
+	width: 220px;
+	height: 220px;
+	overflow: hidden;
+}
+
+.volunteer-card-photo {
+	width: 220px;
+	height: 220px;
+	border-radius: 1000px;
+}
+
+.volunteer-card-name {
+	padding: 0px;
+	margin: 5px;
+	font-size: 32px;
+}
+
+.volunteer-card-title {
+	padding: 0px;
+	margin: 10px 15px 15px 15px;
+	height: 46px;
+	/*
+	background-color:green;
+	*/
+}
+
+#volunteer-cards-container {
+	text-align: center;
+}
+
+.volunteer-card-name-spacer {
+    display: inline;
+    opacity: 0.0;
+    font-size: inherit;
+}
+
+@media (min-width: 993px) {
+    .volunteer-card-name {
+    	height: 70px;
+    }
+}
+
+@media (max-width: 992px) {
+	.volunteer-card-name-spacer {
+	    display: none;
+	}
+}
+
+
+@media (min-width: 500px) and (max-width: 992px) {
+	.volunteer-card-photo-container, .volunteer-card-photo {
+		width: 190px;
+		height: 190px;
+	}
+	.volunteer-card {
+		width: 210px;
+		height: 306px;
+		margin: 15px;
+		padding: 10px;
+	}
+	.volunteer-card-title {
+		font-size: 20px;
+		height: 38px
+	}
+	.volunteer-card-name {
+	    font-size: 22px;
+	}
+}
+
+@media (max-width: 499px) {
+	.volunteer-card-photo-container, .volunteer-card-photo {
+		width: 250px;
+		height: 250px;
+	}
+	.volunteer-card {
+		width: 290px;
+		height: 373px;
+		margin: 7px 15px 8px 15px;
+	}
+	.volunteer-card {
+		padding: 15px;
+	}
+	.volunteer-card-name {
+	    font-size: 26px;
+	}
+}
 
