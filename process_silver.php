@@ -11,7 +11,7 @@
 	
 	$charge = \Stripe\Charge::create(array(
 		'customer' => $customer->id,
-		'amount' => 150000,
+		'amount' => 154500,
 		'description' => 'RowdyHacks Sponsorship',
 		'currency' => 'usd'
 	));

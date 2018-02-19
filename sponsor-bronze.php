@@ -142,6 +142,9 @@
                 Sponsor RowdyHacks
             </h2>
             <br />
+            <div style="max-width:75%;display:inline-block;padding:14px;">
+                There is a 3% convenience fee for online payments. The convenience fee only applies to card payments and does not apply to other payment methods.
+            </div>
             <div id="sponsors-container">
                 <div class="sponsor-card">
                     <h2>
@@ -211,7 +214,7 @@
 						<script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
 							data-key="<?php echo $stripe['publishable_key']; ?>"
 							data-description="Bronze Sponsor"
-							data-amount="75000"
+							data-amount="77250"
 							data-locale="auto"
 							data-label="Pay with Card or Bitcoin"
 							data-currency="usd"

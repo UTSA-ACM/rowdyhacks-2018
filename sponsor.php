@@ -142,6 +142,9 @@
                 Sponsor RowdyHacks
             </h2>
             <br />
+            <div style="max-width:75%;display:inline-block;padding:14px;">
+                There is a 3% convenience fee for online payments. The convenience fee only applies to card payments and does not apply to other payment methods.
+            </div>
             <div id="sponsors-container">
                 <div class="sponsor-card">
                     <h2>

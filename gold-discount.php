@@ -142,6 +142,9 @@
                 Sponsor RowdyHacks
             </h2>
             <br />
+            <div style="max-width:75%;display:inline-block;padding:14px;">
+                There is a 3% convenience fee for online payments. The convenience fee only applies to card payments and does not apply to other payment methods.
+            </div>
             <div id="sponsors-container">
                 <div class="sponsor-card">
                     <h2>
@@ -175,7 +178,7 @@
                         <input type="checkbox" id="sending-sponsors-silver" name="sending-sponsors" style="" checked />
                         We will send mentors
                     </div>
-                    <a href="sponsor-silver.php" id="silver-link">
+                    <a href="silver-discount.php" id="silver-link">
                         <input type="button" value="Sponsor" id="silver-sponsor-button" class="silver" />
                     </a>
                 </div>
@@ -192,7 +195,7 @@
                         <input type="checkbox" id="sending-sponsors-gold" name="sending-sponsors" style="" checked />
                         We will send mentors
                     </div>
-                    <a href="sponsor-gold.php" id="gold-link">
+                    <a href="gold-discount.php" id="gold-link">
                         <input type="button" value="Sponsor" id="gold-sponsor-button" class="gold" />
                     </a>
                 </div>
@@ -211,7 +214,7 @@
 						<script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
 							data-key="<?php echo $stripe['publishable_key']; ?>"
 							data-description="Bronze Sponsor"
-							data-amount="250000"
+							data-amount="257500"
 							data-locale="auto"
 							data-label="Pay with Card or Bitcoin"
 							data-currency="usd"
