@@ -35,6 +35,20 @@
 
         <script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <?php
+            if($_SERVER['SERVER_NAME'] == 'localhost'){
+                echo('<!--');
+            }
+        ?>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71408623-2"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-71408623-2');
+        </script>
+        <!---->
         <script type="text/javascript">
             jQuery(document).ready(function(){
             	$('.dayopen').on('click', function(e) {
@@ -493,7 +507,14 @@
                                             <p class="subtitle">San Antonio, TX</p>
                                             <p class="subtitle">April 7 - 8</p>
                                             <div class="home_btn">
-                                                <a class="btn btn-md" id="sign-up-btn" onclick="preventDefault();">Registration Opens Feb. 26</a>
+                                                <?php
+                                                    if(time() > 1519667940 || (isset($_GET['test']) && $_GET['test'] == 'true')){
+                                                        echo('<a class="btn btn-md" id="sign-up-btn" href="https://goo.gl/forms/4UrBPcmCpMZEBkXg1">Register</a>');
+                                                    }
+                                                    else{
+                                                        echo('<a class="btn btn-md" id="sign-up-btn" onclick="preventDefault();">Registration Opens at 12:00</a>');
+                                                    }
+                                                ?>
                                             </div>
                                         </div>
                                     </div>
@@ -715,6 +736,21 @@
 
 
         <section id="sponsors" class="portfolio">
+            <h2 style="text-align:center;">
+                Sponsors
+            </h2>
+            <div class="sponsor-section">
+                <h3 style="background-color:#c0ffee;">
+                    Platinum
+                </h3>
+                <a href="http://geekdom.com/">
+                    <div class="mix-logo" style="background-image:url('assets/images/geekdom.png');">
+                    </div>
+                    <div class="mix-description">
+                        Geekdom is our platinum sponsor.
+                    </div>
+                </a>
+            </div>
             <div class="container">
                 <div class="row" style="overflow:visible;">
                     <div class="main_mix_content text-center sections" style="overflow:visible;">
@@ -757,7 +793,7 @@
                                         <div class="mix-logo" style="background-image:url('assets/images/infosys.png');">
                                         </div>
                                         <div class="mix-description">
-                                            Infosys is a bronze sponsor.
+                                            Infosys is a global leader in technology services & consulting helping clients in more than 50 countries to create & execute digital transformation strategies.
                                         </div>
                                     </div>
                                 </a>
@@ -878,7 +914,7 @@
                                         <div style="background-image:url('assets/images/infosys.png');">
                                         </div>
                                         <div>
-                                            Infosys is a bronze sponsor.
+                                            Infosys is a global leader in technology services & consulting helping clients in more than 50 countries to create & execute digital transformation strategies.
                                         </div>
                                     </div>
                                 </a>

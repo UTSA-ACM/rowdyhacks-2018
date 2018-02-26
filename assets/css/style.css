@@ -1394,3 +1394,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0c0f28', end
     }
 }
 
+.sponsor-section > h2 {
+    width: 100vw;
+    height: 40px;
+}
+
