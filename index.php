@@ -6,7 +6,9 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>RowdyHacks</title>
+        <title>
+            RowdyHacks
+        </title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
@@ -554,7 +556,7 @@
                                         <br />
                                         <div style="height:250px;">
                                             <p id="about-1">
-                                                RowdyHacks is a 24-hour competitive programming event in which teams of students work together to “hack” together a website, app, or tool. RowdyHacks is for everyone: whether you’ve never written a line of code or you’re a seasoned programmer, the most important thing is to learn something new and have fun!
+                                                RowdyHacks is a 24-hour competitive programming event in which, teams of students work together to “hack” a website, app, or tool. Whether you have never written a line of code or you are a seasoned programmer, RowdyHacks is for everyone! Use RowdyHacks to your advantage to learn and gain valuable skills, increase your network, boost your resume and have fun.
                                             </p>
                                             <p id="about-2" style="display:none;">
                                                 RowdyHacks started in 2016 as a small, student-led hackathon sponsored by the Association of Computing Machinery at UTSA. Thanks to contributions from the Department of Computer Science at UTSA, the event has continued to grow bigger in size. This year RowdyHacks is expanding, as we welcome students from other San Antonio Universities and head to Downtown San Antonio for the first time.
@@ -736,21 +738,109 @@
 
 
         <section id="sponsors" class="portfolio">
-            <h2 style="text-align:center;">
+            <!-- Alternative Sponsor layout -->
+            <!--
+            <h2 style="text-align:center;margin-top:30px;">
                 Sponsors
             </h2>
             <div class="sponsor-section">
-                <h3 style="background-color:#c0ffee;">
+                <h3 style="background-color:#3cada9;color:#efefef;">
                     Platinum
                 </h3>
-                <a href="http://geekdom.com/">
-                    <div class="mix-logo" style="background-image:url('assets/images/geekdom.png');">
+                <a href="http://geekdom.com/" class="sponsor-container">
+                    <div class="sponsor-logo" style="max-width:600px;">
+                        <img src="assets/images/geekdom.png" />
                     </div>
-                    <div class="mix-description">
+                    <div class="sponsor-description">
                         Geekdom is our platinum sponsor.
                     </div>
                 </a>
             </div>
+            <div class="sponsor-section">
+                <h3 style="background-color:#e8b10c;">
+                    Gold
+                </h3>
+                <a href="https://www.afciviliancareers.com/" class="sponsor-container">
+                    <div class="sponsor-logo">
+                        <img src="assets/images/usaf.png" />
+                    </div>
+                    <div class="sponsor-description">
+                        Working shoulder to shoulder, we support and sustain the United States Air Force. Its aircraft. Its facilities. Its infrastructure. Its systems. And all 300,000 active duty Airmen.  We are the civilians who support and sustain the Air Force. At 180,000 strong, we too are a force to be reckoned with.
+                    </div>
+                </a>
+                <a href="https://www.coxautoinc.com/" class="sponsor-container">
+                    <div class="sponsor-logo">
+                        <img src="assets/images/cox.png" />
+                    </div>
+                    <div class="sponsor-description">
+                        We go all out. We make success a team sport. We’re the perfect mix of start-up attitude and big company resources. And, being part of a family-run business allows us to treat our team members and clients like they’re just that – family. We are Cox Automotive, and together, we are transforming the way the world buys, owns and sells vehicles.
+                    </div>
+                </a>
+            </div>
+            <div class="sponsor-section">
+                <h3 style="background-color:#cacaca;">
+                    Silver
+                </h3>
+                <a href="http://usaa.com/" class="sponsor-container">
+                    <div class="sponsor-logo">
+                        <img src="assets/images/usaa.png" />
+                    </div>
+                    <div class="sponsor-description">
+                        The mission of the association is to facilitate the financial security of its members, associates, and their families through provision of a full range of highly competitive financial products and services; in so doing, USAA seeks to be the provider of choice for the military community.
+                    </div>
+                </a>
+            </div>
+            <div class="sponsor-section">
+                <h3 style="background-color:#b76c0a;color:#efefef;">
+                    Bronze
+                </h3>
+                <a href="https://www.motiva.com/" class="sponsor-container">
+                    <div class="sponsor-logo">
+                        <img src="assets/images/motiva.png" />
+                    </div>
+                    <div class="sponsor-description">
+                        At Motiva, our success is powered by the collective energy and passion of our 2,300 dedicated US employees. We own and operate North America’s largest refinery, and through a network of 24 distribution terminals, we supply retail outlets with gasoline and diesel under the Shell and 76® brands.
+                    </div>
+                </a>
+                <a href="https://www.infosys.com/" class="sponsor-container">
+                    <div class="sponsor-logo">
+                        <img src="assets/images/infosys.png" />
+                    </div>
+                    <div class="sponsor-description">
+                        Infosys is a global leader in technology services & consulting helping clients in more than 50 countries to create & execute digital transformation strategies.
+                    </div>
+                </a>
+            </div>
+            <div class="sponsor-section">
+                <h3 style="background-color:#0c2340;color:#113461">
+                    Partner
+                </h3>
+                <a href="https://www.army.mil/armymedicine" class="sponsor-container">
+                    <div class="sponsor-logo">
+                        <img src="assets/images/medcom.png" />
+                    </div>
+                    <div class="sponsor-description">
+                        US Army Medical Command is very interested in mobile applications that can support prolonged field care in the theater of operation.  Of particular interest is how these how these apps can transmit data and facilitate clinical decision making in remote areas that lack access to significant medical resources.
+                    </div>
+                </a>
+                <a href="http://acm-utsa.org/" class="sponsor-container">
+                    <div class="sponsor-logo">
+                        <img src="assets/images/acm.png" />
+                    </div>
+                    <div class="sponsor-description">
+                        ACM UTSA is the host of RowdyHacks and a student run non-profit at UTSA, dedicated to helping students grow and learn more about technology and industry.
+                    </div>
+                </a>
+                <a href="http://acm-utsa.org/groups/" class="sponsor-container">
+                    <div class="sponsor-logo">
+                        <img src="assets/images/acm-w.png" />
+                    </div>
+                    <div class="sponsor-description">
+                        ACM-W aims to create an engaging academic, professional, and social network for women and minorities in technology. Our purpose is to connect students with leaders and encourage them to pursue career opportunities in computing fields and to mentor for academic and professional success.
+                    </div>
+                </a>
+            </div>
+            -->
             <div class="container">
                 <div class="row" style="overflow:visible;">
                     <div class="main_mix_content text-center sections" style="overflow:visible;">
@@ -779,35 +869,6 @@
                                         </div>
                                     </div>
                                 </a>
-                                <a href="https://www.motiva.com/">
-                                    <div class="col-sm-3 hidden-xs-down mix cat3 no-padding">
-                                        <div class="mix-logo" style="background-image:url('assets/images/motiva.png');">
-                                        </div>
-                                        <div class="mix-description">
-                                            At Motiva, our success is powered by the collective energy and passion of our 2,300 dedicated US employees. We own and operate North America’s largest refinery, and through a network of 24 distribution terminals, we supply retail outlets with gasoline and diesel under the Shell and 76® brands.
-                                        </div>
-                                    </div>
-                                </a>
-                                <a href="https://www.infosys.com/">
-                                    <div class="col-sm-3 hidden-xs-down mix cat3 no-padding">
-                                        <div class="mix-logo" style="background-image:url('assets/images/infosys.png');">
-                                        </div>
-                                        <div class="mix-description">
-                                            Infosys is a global leader in technology services & consulting helping clients in more than 50 countries to create & execute digital transformation strategies.
-                                        </div>
-                                    </div>
-                                </a>
-                                <a href="http://usaa.com">
-                                    <div class="col-sm-3 hidden-xs-down mix cat2 no-padding">
-                                        <div class="mix-logo" style="background-image:url('assets/images/usaa.png');">
-                                        </div>
-                                        <div class="mix-description">
-                                            The mission of the association is to facilitate the financial security of its members, associates, and their families through provision of a full range of highly competitive financial products and services; in so doing, USAA seeks to be the provider of choice for the military community.
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="row">
                                 <a href="https://www.afciviliancareers.com/">
                                     <div class="col-sm-3 hidden-xs-down mix cat1 no-padding">
                                         <div class="mix-logo" style="background-image:url('assets/images/usaf.png');">
@@ -826,6 +887,44 @@
                                         </div>
                                     </div>
                                 </a>
+                                <a href="http://usaa.com">
+                                    <div class="col-sm-3 hidden-xs-down mix cat2 no-padding">
+                                        <div class="mix-logo" style="background-image:url('assets/images/usaa.png');">
+                                        </div>
+                                        <div class="mix-description">
+                                            The mission of the association is to facilitate the financial security of its members, associates, and their families through provision of a full range of highly competitive financial products and services; in so doing, USAA seeks to be the provider of choice for the military community.
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="row">
+                                <a href="https://www.motiva.com/">
+                                    <div class="col-sm-3 hidden-xs-down mix cat3 no-padding">
+                                        <div class="mix-logo" style="background-image:url('assets/images/motiva.png');">
+                                        </div>
+                                        <div class="mix-description">
+                                            At Motiva, our success is powered by the collective energy and passion of our 2,300 dedicated US employees. We own and operate North America’s largest refinery, and through a network of 24 distribution terminals, we supply retail outlets with gasoline and diesel under the Shell and 76® brands.
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="https://www.infosys.com/">
+                                    <div class="col-sm-3 hidden-xs-down mix cat3 no-padding">
+                                        <div class="mix-logo" style="background-image:url('assets/images/infosys.png');">
+                                        </div>
+                                        <div class="mix-description">
+                                            Infosys is a global leader in technology services & consulting helping clients in more than 50 countries to create & execute digital transformation strategies.
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="https://www.army.mil/armymedicine/">
+                                    <div class="col-sm-3 hidden-xs-down mix cat5 no-padding">
+                                        <div class="mix-logo" style="background-image:url('assets/images/medcom.png');">
+                                        </div>
+                                        <div class="mix-description">
+                                            US Army Medical Command is very interested in mobile applications that can support prolonged field care in the theater of operation.  Of particular interest is how these how these apps can transmit data and facilitate clinical decision making in remote areas that lack access to significant medical resources.
+                                        </div>
+                                    </div>
+                                </a>
                                 <a href="http://acm-utsa.org/">
                                     <div class="col-sm-3 hidden-xs-down mix cat5 no-padding">
                                         <div class="mix-logo" style="background-image:url('assets/images/acm.png');">
@@ -835,6 +934,7 @@
                                         </div>
                                     </div>
                                 </a>
+                                <!--
                                 <a href="http://acm-utsa.org/groups">
                                     <div class="col-sm-3 hidden-xs-down mix cat5 no-padding">
                                         <div class="mix-logo" style="background-image:url('assets/images/acm-w.png');">
@@ -844,6 +944,7 @@
                                         </div>
                                     </div>
                                 </a>
+                                -->
                             </div>
                             <!--
                             <a href="http://geekdom.com/">
@@ -873,30 +974,12 @@
                                         </div>
                                     </div>
                                 </a>
-                                <a href="https://www.motiva.com/">
-                                    <div class="col-xs-12 hidden-sm-up mix cat3 no-padding">
-                                        <div style="background-image:url('assets/images/motiva.png');">
-                                        </div>
-                                        <div>
-                                            At Motiva, our success is powered by the collective energy and passion of our 2,300 dedicated US employees. We own and operate North America’s largest refinery, and through a network of 24 distribution terminals, we supply retail outlets with gasoline and diesel under the Shell and 76® brands.
-                                        </div>
-                                    </div>
-                                </a>
                                 <a href="https://www.afciviliancareers.com/">
                                     <div class="col-xs-12 hidden-sm-up mix cat1 no-padding">
                                         <div style="background-image:url('assets/images/usaf.png');">
                                         </div>
                                         <div>
                                             Working shoulder to shoulder, we support and sustain the United States Air Force. Its aircraft. Its facilities. Its infrastructure. Its systems. And all 300,000 active duty Airmen.  We are the civilians who support and sustain the Air Force. At 180,000 strong, we too are a force to be reckoned with.
-                                        </div>
-                                    </div>
-                                </a>
-                                <a href="http://usaa.com">
-                                    <div class="hidden-sm-up col-xs-12 mix cat2 no-padding">
-                                        <div style="background-image:url('assets/images/usaa.png');">
-                                        </div>
-                                        <div>
-                                            The mission of the association is to facilitate the financial security of its members, associates, and their families through provision of a full range of highly competitive financial products and services; in so doing, USAA seeks to be the provider of choice for the military community.
                                         </div>
                                     </div>
                                 </a>
@@ -909,12 +992,39 @@
                                         </div>
                                     </div>
                                 </a>
+                                <a href="http://usaa.com">
+                                    <div class="hidden-sm-up col-xs-12 mix cat2 no-padding">
+                                        <div style="background-image:url('assets/images/usaa.png');">
+                                        </div>
+                                        <div>
+                                            The mission of the association is to facilitate the financial security of its members, associates, and their families through provision of a full range of highly competitive financial products and services; in so doing, USAA seeks to be the provider of choice for the military community.
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="https://www.motiva.com/">
+                                    <div class="col-xs-12 hidden-sm-up mix cat3 no-padding">
+                                        <div style="background-image:url('assets/images/motiva.png');">
+                                        </div>
+                                        <div>
+                                            At Motiva, our success is powered by the collective energy and passion of our 2,300 dedicated US employees. We own and operate North America’s largest refinery, and through a network of 24 distribution terminals, we supply retail outlets with gasoline and diesel under the Shell and 76® brands.
+                                        </div>
+                                    </div>
+                                </a>
                                 <a href="https://www.infosys.com/">
                                     <div class="col-xs-12 hidden-sm-up mix cat3 no-padding">
                                         <div style="background-image:url('assets/images/infosys.png');">
                                         </div>
                                         <div>
                                             Infosys is a global leader in technology services & consulting helping clients in more than 50 countries to create & execute digital transformation strategies.
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="https://www.army.mil/armymedicine/">
+                                    <div class="col-xs-12 hidden-sm-up mix cat5 no-padding">
+                                        <div style="background-image:url('assets/images/medcom.png');">
+                                        </div>
+                                        <div>
+                                            US Army Medical Command is very interested in mobile applications that can support prolonged field care in the theater of operation.  Of particular interest is how these how these apps can transmit data and facilitate clinical decision making in remote areas that lack access to significant medical resources.
                                         </div>
                                     </div>
                                 </a>
@@ -953,16 +1063,16 @@
                                 <div class="row">
                                     <div class="col-sm-3 col-xs-12">
                                         <div class="single_counter_right">
-                                            <i class="lnr lnr-users"></i>
-                                            <h2 class="statistic-counter">100</h2>
-                                            <p>Attendees</p>
+                                            <i class="lnr lnr-clock"></i>
+                                            <h2 class="statistic-counter">24</h2>
+                                            <p>Hours</p>
                                         </div>
                                     </div>
                                     <div class="col-sm-3 col-xs-12">
                                         <div class="single_counter_right">
-                                            <i class="lnr lnr-clock"></i>
-                                            <h2 class="statistic-counter">24</h2>
-                                            <p>Hours</p>
+                                            <i class="lnr lnr-users"></i>
+                                            <h2 class="statistic-counter">100</h2>
+                                            <p>Attendees</p>
                                         </div>
                                     </div>
                                     <div class="col-sm-3 col-xs-12">
@@ -1074,7 +1184,7 @@
         										<h3>
         											Who can attend?
         										</h3>
-        										In the past RowdyHacks has only been open to UTSA students. This year we’re excited to announce that we’ll be opening registration to other San Antonio area universities! If you’re a college student in the San Antonio area, you’re eligible to attend RowdyHacks 2018.
+        										In the past, RowdyHacks has only been open to UTSA students. This year we’re excited to announce that we’ll be opening registration to other San Antonio area universities! If you’re a college student in the San Antonio area, you’re eligible to attend RowdyHacks 2018.
         									</div>
         								</div>
         								<div class="col-md-6">
@@ -1083,6 +1193,12 @@
         											Where will RowdyHacks take place?
         										</h3>
         										We are excited to announce our partnership with collaborative coworking space Geekdom to bring you RowdyHacks 2018. This year’s event will take place in downtown San Antonio at Geekdom’s offices. Check out the Location tab for more information.
+        									</div>
+        									<div class="faq-item">
+        									    <h3>
+        									        Who is allowed to register?
+        									    </h3>
+        									    Due to limited spacing/seatings at Geekdom, we are only accepting undergraduate college stuents. We hope in the future we can expand our event to Masters/PhD students.
         									</div>
         									<div class="faq-item">
         										<h3>
