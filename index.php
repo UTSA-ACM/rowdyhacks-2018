@@ -1315,6 +1315,9 @@
                                     <div class="volunteer-card">
                                         <div class="volunteer-card-photo-container">
                                             <img src="assets/images/volunteers/cassidy.jpg" class="volunteer-card-photo" />
+                                            <div class="linkedin-container">
+                                                <img src="assets/images/linkedin_circle_color-256.png" />
+                                            </div>
                                         </div>
                                         <h3 class="volunteer-card-title">
                                             Co-Chair
@@ -1328,6 +1331,9 @@
                                     <div class="volunteer-card">
                                         <div class="volunteer-card-photo-container">
                                             <img src="assets/images/volunteers/jessica.jpg" class="volunteer-card-photo" />
+                                            <div class="linkedin-container">
+                                                <img src="assets/images/linkedin_circle_color-256.png" />
+                                            </div>
                                         </div>
                                         <h3 class="volunteer-card-title">
                                             Co-Chair
@@ -1337,8 +1343,83 @@
                                         </h3>
                                     </div>
                                 </a>
-                            </div>
-                            <div class="gap">
+                                <a href="https://www.linkedin.com/in/julia-vasquez-2b541a126">
+                                    <div class="volunteer-card">
+                                        <div class="volunteer-card-photo-container">
+                                            <img src="assets/images/volunteers/julia_vasquez.jpg" class="volunteer-card-photo" />
+                                            <div class="linkedin-container">
+                                                <img src="assets/images/linkedin_circle_color-256.png" />
+                                            </div>
+                                        </div>
+                                        <h3 class="volunteer-card-title">
+                                            Treasurer
+                                        </h3>
+                                        <h4 class="volunteer-card-name">
+                                            Julia Vasquez <div class="volunteer-card-name-spacer" data-void-comment="my apologies regarding this cringy workaround">...........</div>
+                                        </h3>
+                                    </div>
+                                </a>
+                                <a>
+                                    <div class="volunteer-card">
+                                        <div class="volunteer-card-photo-container">
+                                            <img src="assets/images/volunteers/default.jpg" class="volunteer-card-photo" />
+                                        </div>
+                                        <h3 class="volunteer-card-title">
+                                            Marketing
+                                        </h3>
+                                        <h4 class="volunteer-card-name">
+                                            Matt Moore <div class="volunteer-card-name-spacer" data-void-comment="my apologies regarding this cringy workaround">...........</div>
+                                        </h3>
+                                    </div>
+                                </a>
+                                <a href="https://www.linkedin.com/in/soethanv">
+                                    <div class="volunteer-card">
+                                        <div class="volunteer-card-photo-container">
+                                            <img src="assets/images/volunteers/soe_than.jpg" class="volunteer-card-photo" />
+                                            <div class="linkedin-container">
+                                                <img src="assets/images/linkedin_circle_color-256.png" />
+                                            </div>
+                                        </div>
+                                        <h3 class="volunteer-card-title">
+                                            Workshop Manager
+                                        </h3>
+                                        <h4 class="volunteer-card-name">
+                                            Soe Than <div class="volunteer-card-name-spacer" data-void-comment="my apologies regarding this cringy workaround">...........</div>
+                                        </h3>
+                                    </div>
+                                </a>
+                                <a href="https://www.linkedin.com/in/trase-westbrook-01a2b6105">
+                                    <div class="volunteer-card">
+                                        <div class="volunteer-card-photo-container">
+                                            <img src="assets/images/volunteers/trase_westbrook.jpg" class="volunteer-card-photo" />
+                                            <div class="linkedin-container">
+                                                <img src="assets/images/linkedin_circle_color-256.png" />
+                                            </div>
+                                        </div>
+                                        <h3 class="volunteer-card-title">
+                                            Catering Manager
+                                        </h3>
+                                        <h4 class="volunteer-card-name">
+                                            Trase Westbrook
+                                        </h3>
+                                    </div>
+                                </a>
+                                <a href="http://www.linkedin.com/in/arhutton">
+                                    <div class="volunteer-card">
+                                        <div class="volunteer-card-photo-container">
+                                            <img src="assets/images/volunteers/andrew_hutton.jpg" class="volunteer-card-photo" />
+                                            <div class="linkedin-container">
+                                                <img src="assets/images/linkedin_circle_color-256.png" />
+                                            </div>
+                                        </div>
+                                        <h3 class="volunteer-card-title">
+                                            Web Developer
+                                        </h3>
+                                        <h4 class="volunteer-card-name">
+                                            Andrew Hutton
+                                        </h3>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                     </div>                     

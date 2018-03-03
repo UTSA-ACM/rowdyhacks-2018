@@ -1298,6 +1298,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0c0f28', end
 	width: 220px;
 	height: 220px;
 	overflow: hidden;
+	position: relative;
 }
 
 .volunteer-card-photo {
@@ -1331,6 +1332,22 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0c0f28', end
     font-size: inherit;
 }
 
+
+.linkedin-container {
+    background-color: #efefefef;
+    border-radius: 10000px;
+    padding: 7px;
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    display: none;
+}
+
+.linkedin-container > img {
+    width: 25px;
+    height: 25px;
+}
+
 @media (min-width: 993px) {
     .volunteer-card-name {
     	height: 70px;
@@ -1362,6 +1379,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0c0f28', end
 	.volunteer-card-name {
 	    font-size: 22px;
 	}
+    .linkedin-container {
+        position: absolute;
+        top: 13px;
+        left: 13px;
+        padding: 5px;
+        display: inline-block;
+    }
 }
 
 @media (max-width: 499px) {
@@ -1380,6 +1404,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0c0f28', end
 	.volunteer-card-name {
 	    font-size: 26px;
 	}
+	
+    .linkedin-container {
+        position: absolute;
+        top: 18px;
+        left: 18px;
+        display: inline-block;
+    }
 }
 
 .main_home_title {
@@ -1465,4 +1496,3 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0c0f28', end
     margin: 10px;
     overflow: visible;
 }
-
