@@ -510,7 +510,10 @@
                                             <p class="subtitle">April 7 - 8</p>
                                             <div class="home_btn">
                                                 <?php
-                                                    if(time() > 1519667940 || (isset($_GET['test']) && $_GET['test'] == 'true')){
+                                                    if(1){
+                                                        echo('<a class="btn btn-md" id="sign-up-btn" href="https://goo.gl/forms/UGJfEhNoh2GThOxo1">Register</a>');
+                                                    }
+                                                    else if(time() > 1519667940 || (isset($_GET['test']) && $_GET['test'] == 'true')){
                                                         echo('<a class="btn btn-md" id="sign-up-btn" href="https://goo.gl/forms/4UrBPcmCpMZEBkXg1">Register</a>');
                                                     }
                                                     else{
