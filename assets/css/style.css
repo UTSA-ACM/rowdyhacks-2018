@@ -1288,9 +1288,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0c0f28', end
 	*/
 	margin: 10px;
 	border-radius: 3px;
-	background-color: #efefefef;
+	background-color: inherit;
+	/*
 	box-shadow: 0px 1px 11px -3px;
-	color: #323232;
+	*/
+	color: #efefef;
 	clear: all;
 }
 
@@ -1309,8 +1311,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0c0f28', end
 
 .volunteer-card-name {
 	padding: 0px;
-	margin: 5px;
-	font-size: 32px;
+	margin: 0px;
+	font-size: 27px;
 }
 
 .volunteer-card-title {
@@ -1334,13 +1336,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0c0f28', end
 
 
 .linkedin-container {
-    background-color: #efefefef;
+    background-color: #efefef;
     border-radius: 10000px;
-    padding: 7px;
+    padding: 5px;
     position: absolute;
     top: 18px;
     left: 18px;
     display: none;
+    box-shadow: 1px 1px 10px -4px #000000;
 }
 
 .linkedin-container > img {
@@ -1496,3 +1499,34 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0c0f28', end
     margin: 10px;
     overflow: visible;
 }
+
+#mixcontent-desktop > div > div:nth-child(1) {
+    z-index: 35;
+}
+#mixcontent-desktop > div > div:nth-child(2) {
+    z-index: 34;
+}
+#mixcontent-desktop > div > div:nth-child(3) {
+    z-index: 33;
+}
+#mixcontent-desktop > div > div:nth-child(4) {
+    z-index: 32;
+}
+
+/*
+#mixcontent-desktop > div > a:nth-child(1), #mixcontent-desktop > div > a:nth-child(2), #mixcontent-desktop > div > a:nth-child(3), #mixcontent-desktop > div > a:nth-child(4) {
+    z-index: 25;
+}
+
+#mixcontent-desktop > div > a:nth-child(5), #mixcontent-desktop > div > a:nth-child(6), #mixcontent-desktop > div > a:nth-child(7), #mixcontent-desktop > div > a:nth-child(8) {
+    z-index: 24;
+}
+
+#mixcontent-desktop > div > a:nth-child(9), #mixcontent-desktop > div > a:nth-child(10), #mixcontent-desktop > div > a:nth-child(11), #mixcontent-desktop > div > a:nth-child(12) {
+    z-index: 23;
+}
+
+#mixcontent-desktop > div > a:nth-child(13), #mixcontent-desktop > div > a:nth-child(14), #mixcontent-desktop > div > a:nth-child(15), #mixcontent-desktop > div > a:nth-child(16) {
+    z-index: 22;
+}
+*/

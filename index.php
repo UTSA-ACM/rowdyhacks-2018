@@ -228,6 +228,16 @@
                 	}, 200);
             	}, 12000);
         	});
+    	    $("#partners").css("height", "0");
+    	    $("#partners").css("overflow", "hidden");
+        	$("#partner-button").on("click", function(){
+        	    $("#partners").css("height", "");
+        	    $("#partners").css("overflow", "visible");
+        	});
+        	$(".othbtn").on("click", function(){
+        	    $("#partners").css("height", "0");
+        	    $("#partners").css("overflow", "hidden");
+        	});
 		});
 		var recognition;
 		function startRecognition() {
@@ -852,18 +862,18 @@
                         </div>
                         <div class="main_mix_menu">
                             <ul>
-                                <li class="btn btn-primary filter" data-filter="all">All</li>
-                                <li class="btn btn-primary filter" data-filter=".cat0">Platinum</li>
-                                <li class="btn btn-primary filter" data-filter=".cat1">Gold</li>
-                                <li class="btn btn-primary filter" data-filter=".cat2">Silver</li>
-                                <li class="btn btn-primary filter" data-filter=".cat3">Bronze</li>
-                                <li class="btn btn-primary filter" data-filter=".cat5">Partners</li>
+                                <li class="btn btn-primary filter othbtn" data-filter="all">All</li>
+                                <li class="btn btn-primary filter othbtn" data-filter=".cat0">Platinum</li>
+                                <li class="btn btn-primary filter othbtn" data-filter=".cat1">Gold</li>
+                                <li class="btn btn-primary filter othbtn" data-filter=".cat2">Silver</li>
+                                <li class="btn btn-primary filter othbtn" data-filter=".cat3">Bronze</li>
+                                <li class="btn btn-primary filter" data-filter=".cat5" id="partner-button">Partners</li>
                             </ul>
                         </div>
 
                         <div id="mixcontent-desktop" class="mixcontent" style="overflow:visible;text-align:center;padding:0px 40px;">
                             <div class="row">
-                                <a href="http://geekdom.com/">
+                                <a href="https://geekdom.com/">
                                     <div class="col-sm-3 hidden-xs-down mix cat0 no-padding">
                                         <div class="mix-logo" style="background-image:url('assets/images/geekdom.png');">
                                         </div>
@@ -920,11 +930,61 @@
                                     </div>
                                 </a>
                                 <a href="https://www.army.mil/armymedicine/">
+                                    <div class="col-sm-3 hidden-xs-down mix no-padding">
+                                        <div class="mix-logo" style="background-image:url('assets/images/medcom.png');">
+                                        </div>
+                                        <div class="mix-description">
+                                            US Army Medical Command is very interested in mobile applications that can support prolonged field care in the theater of operation.  Of particular interest is how these how these apps can transmit data and facilitate clinical decision making in remote areas that lack access to significant medical resources.
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="http://accenture.com">
+                                    <div class="col-sm-3 hidden-xs-down mix no-padding">
+                                        <div class="mix-logo" style="background-image:url('assets/images/accenture.png');">
+                                        </div>
+                                        <div class="mix-description">
+                                            Accenture Federal Services, a wholly-owned subsidiary of Accenture, helps U.S. federal agencies build the government of the future. Accenture Federal Services is uniquely positioned to support federal agencies in shattering the status quo, achieving profound efficiencies and relentlessly delivering results. Accenture Federal Services is a long-time and trusted resource for the federal community. Every cabinet level agency in the United States-and 20 of the country's largest federal government agencies-have worked with Accenture Federal Services to achieve outcomes and move toward high performance.
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="row">
+                                <a href="http://acm-utsa.org/">
+                                    <div class="col-sm-3 hidden-xs-down mix no-padding">
+                                        <div class="mix-logo" style="background-image:url('assets/images/acm.png');">
+                                        </div>
+                                        <div class="mix-description">
+                                            ACM UTSA is the host of RowdyHacks and a student run non-profit at UTSA, dedicated to helping students grow and learn more about technology and industry.
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="http://acm-utsa.org/groups">
+                                    <div class="col-sm-3 hidden-xs-down mix no-padding">
+                                        <div class="mix-logo" style="background-image:url('assets/images/acm-w.png');">
+                                        </div>
+                                        <div class="mix-description">
+                                            ACM-W aims to create an engaging academic, professional, and social network for women and minorities in technology. Our purpose is to connect students with leaders and encourage them to pursue career opportunities in computing fields and to mentor for academic and professional success.
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <br />
+                            <div class="row" id="partners">
+                                <a href="https://www.army.mil/armymedicine/">
                                     <div class="col-sm-3 hidden-xs-down mix cat5 no-padding">
                                         <div class="mix-logo" style="background-image:url('assets/images/medcom.png');">
                                         </div>
                                         <div class="mix-description">
                                             US Army Medical Command is very interested in mobile applications that can support prolonged field care in the theater of operation.  Of particular interest is how these how these apps can transmit data and facilitate clinical decision making in remote areas that lack access to significant medical resources.
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="http://accenture.com">
+                                    <div class="col-sm-3 hidden-xs-down mix cat5 no-padding">
+                                        <div class="mix-logo" style="background-image:url('assets/images/accenture.png');">
+                                        </div>
+                                        <div class="mix-description">
+                                            Accenture Federal Services, a wholly-owned subsidiary of Accenture, helps U.S. federal agencies build the government of the future. Accenture Federal Services is uniquely positioned to support federal agencies in shattering the status quo, achieving profound efficiencies and relentlessly delivering results. Accenture Federal Services is a long-time and trusted resource for the federal community. Every cabinet level agency in the United States-and 20 of the country's largest federal government agencies-have worked with Accenture Federal Services to achieve outcomes and move toward high performance.
                                         </div>
                                     </div>
                                 </a>
@@ -937,7 +997,6 @@
                                         </div>
                                     </div>
                                 </a>
-                                <!--
                                 <a href="http://acm-utsa.org/groups">
                                     <div class="col-sm-3 hidden-xs-down mix cat5 no-padding">
                                         <div class="mix-logo" style="background-image:url('assets/images/acm-w.png');">
@@ -947,7 +1006,6 @@
                                         </div>
                                     </div>
                                 </a>
-                                -->
                             </div>
                             <!--
                             <a href="http://geekdom.com/">
@@ -1046,6 +1104,15 @@
                                         </div>
                                         <div>
                                             ACM-W aims to create an engaging academic, professional, and social network for women and minorities in technology. Our purpose is to connect students with leaders and encourage them to pursue career opportunities in computing fields and to mentor for academic and professional success.
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="http://accenture.com">
+                                    <div class="col-xs-12 hidden-sm-up mix cat5 no-padding">
+                                        <div style="background-image:url('assets/images/accenture.png');">
+                                        </div>
+                                        <div>
+                                            Accenture Federal Services, a wholly-owned subsidiary of Accenture, helps U.S. federal agencies build the government of the future. Accenture Federal Services is uniquely positioned to support federal agencies in shattering the status quo, achieving profound efficiencies and relentlessly delivering results. Accenture Federal Services is a long-time and trusted resource for the federal community. Every cabinet level agency in the United States-and 20 of the country's largest federal government agencies-have worked with Accenture Federal Services to achieve outcomes and move toward high performance.
                                         </div>
                                     </div>
                                 </a>
@@ -1342,7 +1409,7 @@
                                             Co-Chair
                                         </h3>
                                         <h4 class="volunteer-card-name">
-                                            Jessica L&ecirc; <div class="volunteer-card-name-spacer" data-void-comment="my apologies regarding this cringy workaround">...........</div>
+                                            Jessica L&ecirc; 
                                         </h3>
                                     </div>
                                 </a>
@@ -1358,20 +1425,20 @@
                                             Treasurer
                                         </h3>
                                         <h4 class="volunteer-card-name">
-                                            Julia Vasquez <div class="volunteer-card-name-spacer" data-void-comment="my apologies regarding this cringy workaround">...........</div>
+                                            Julia Vasquez 
                                         </h3>
                                     </div>
                                 </a>
-                                <a>
+                                <a href="http://linkedin.com/in/matt-moore-01409579">
                                     <div class="volunteer-card">
                                         <div class="volunteer-card-photo-container">
-                                            <img src="assets/images/volunteers/default.jpg" class="volunteer-card-photo" />
+                                            <img src="assets/images/volunteers/matt_moore.jpg" class="volunteer-card-photo" />
                                         </div>
                                         <h3 class="volunteer-card-title">
                                             Marketing
                                         </h3>
                                         <h4 class="volunteer-card-name">
-                                            Matt Moore <div class="volunteer-card-name-spacer" data-void-comment="my apologies regarding this cringy workaround">...........</div>
+                                            Matt Moore 
                                         </h3>
                                     </div>
                                 </a>
@@ -1387,7 +1454,7 @@
                                             Workshop Manager
                                         </h3>
                                         <h4 class="volunteer-card-name">
-                                            Soe Than <div class="volunteer-card-name-spacer" data-void-comment="my apologies regarding this cringy workaround">...........</div>
+                                            Soe Than<!-- <div class="volunteer-card-name-spacer" data-void-comment="my apologies regarding this cringy workaround">...........</div>-->
                                         </h3>
                                     </div>
                                 </a>
