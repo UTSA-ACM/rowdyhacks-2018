@@ -521,7 +521,7 @@
                                             <div class="home_btn">
                                                 <?php
                                                     if(1){
-                                                        echo('<a class="btn btn-md" id="sign-up-btn" href="https://goo.gl/forms/UGJfEhNoh2GThOxo1">Register</a>');
+                                                        echo('<a class="btn btn-md" id="sign-up-btn" href="https://goo.gl/forms/UGJfEhNoh2GThOxo1" style="margin:10px;">Register</a>');
                                                     }
                                                     else if(time() > 1519667940 || (isset($_GET['test']) && $_GET['test'] == 'true')){
                                                         echo('<a class="btn btn-md" id="sign-up-btn" href="https://goo.gl/forms/4UrBPcmCpMZEBkXg1">Register</a>');
@@ -530,6 +530,7 @@
                                                         echo('<a class="btn btn-md" id="sign-up-btn" onclick="preventDefault();">Registration Opens at 12:00</a>');
                                                     }
                                                 ?>
+                                                <a class="btn btn-md" id="sign-up-btn" href="https://goo.gl/forms/dQ4sI1s7zZqL8nOu1" style="margin:10px;">Volunteer</a>
                                             </div>
                                         </div>
                                     </div>
@@ -651,37 +652,37 @@
 									</li>
 									<li class="schedule-item">
 										<div class="schedule-time">
-											10:00
+											10:00am
 										</div>
 										Check In Opens
 									</li>
 									<li class="schedule-item">
 										<div class="schedule-time">
-											12:00
+											12:00pm
 										</div>
 										Opening Ceremony
 									</li>
 									<li class="schedule-item">
 										<div class="schedule-time">
-											1:30
+											1:30pm
 										</div>
 										Hacking Begins
 									</li>
 									<li class="schedule-item">
 										<div class="schedule-time">
-											2:00 - 5:00
+											2:00pm - 5:00pm
 										</div>
 										Workshops
 									</li>
 									<li class="schedule-item">
 										<div class="schedule-time">
-											6:00
+											6:00pm
 										</div>
 										Dinner
 									</li>
 									<li class="schedule-item">
 										<div class="schedule-time">
-											7:00 - 9:00
+											7:00pm - 9:00pm
 										</div>
 										Workshops
 									</li>
@@ -699,43 +700,43 @@
 									</li>
 									<li class="schedule-item">
 										<div class="schedule-time">
-											12:00
+											12:00am
 										</div>
 										Midnight Snack
 									</li>
 									<li class="schedule-item">
 										<div class="schedule-time">
-											8:00
+											8:00am
 										</div>
 										Breakfast
 									</li>
 									<li class="schedule-item">
 										<div class="schedule-time">
-											10:30
+											10:30am
 										</div>
 										Project Submissions
 									</li>
 									<li class="schedule-item">
 										<div class="schedule-time">
-											11:00
+											11:00am
 										</div>
 										Demos and Judging
 									</li>
 									<li class="schedule-item">
 										<div class="schedule-time">
-											1:00
+											1:00pm
 										</div>
 										Lunch
 									</li>
 									<li class="schedule-item">
 										<div class="schedule-time">
-											2:00
+											2:00pm
 										</div>
 										Closing Ceremonies
 									</li>
 									<li class="schedule-item">
 										<div class="schedule-time">
-											3:00
+											3:00pm
 										</div>
 										Goodbye!
 									</li>
@@ -1089,6 +1090,15 @@
                                         </div>
                                     </div>
                                 </a>
+                                <a href="http://accenture.com">
+                                    <div class="col-xs-12 hidden-sm-up mix cat5 no-padding">
+                                        <div style="background-image:url('assets/images/accenture.png');">
+                                        </div>
+                                        <div>
+                                            Accenture Federal Services, a wholly-owned subsidiary of Accenture, helps U.S. federal agencies build the government of the future. Accenture Federal Services is uniquely positioned to support federal agencies in shattering the status quo, achieving profound efficiencies and relentlessly delivering results. Accenture Federal Services is a long-time and trusted resource for the federal community. Every cabinet level agency in the United States-and 20 of the country's largest federal government agencies-have worked with Accenture Federal Services to achieve outcomes and move toward high performance.
+                                        </div>
+                                    </div>
+                                </a>
                                 <a href="http://acm-utsa.org/">
                                     <div class="col-xs-12 hidden-sm-up mix cat5 no-padding">
                                         <div style="background-image:url('assets/images/acm.png');">
@@ -1104,15 +1114,6 @@
                                         </div>
                                         <div>
                                             ACM-W aims to create an engaging academic, professional, and social network for women and minorities in technology. Our purpose is to connect students with leaders and encourage them to pursue career opportunities in computing fields and to mentor for academic and professional success.
-                                        </div>
-                                    </div>
-                                </a>
-                                <a href="http://accenture.com">
-                                    <div class="col-xs-12 hidden-sm-up mix cat5 no-padding">
-                                        <div style="background-image:url('assets/images/accenture.png');">
-                                        </div>
-                                        <div>
-                                            Accenture Federal Services, a wholly-owned subsidiary of Accenture, helps U.S. federal agencies build the government of the future. Accenture Federal Services is uniquely positioned to support federal agencies in shattering the status quo, achieving profound efficiencies and relentlessly delivering results. Accenture Federal Services is a long-time and trusted resource for the federal community. Every cabinet level agency in the United States-and 20 of the country's largest federal government agencies-have worked with Accenture Federal Services to achieve outcomes and move toward high performance.
                                         </div>
                                     </div>
                                 </a>
@@ -1433,6 +1434,9 @@
                                     <div class="volunteer-card">
                                         <div class="volunteer-card-photo-container">
                                             <img src="assets/images/volunteers/matt_moore.jpg" class="volunteer-card-photo" />
+                                            <div class="linkedin-container">
+                                                <img src="assets/images/linkedin_circle_color-256.png" />
+                                            </div>
                                         </div>
                                         <h3 class="volunteer-card-title">
                                             Marketing
