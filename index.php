@@ -228,6 +228,16 @@
                 	}, 200);
             	}, 12000);
         	});
+    	    $("#silver-sponsors").css("height", "0");
+    	    $("#silver-sponsors").css("overflow", "hidden");
+        	$("#silver-sponsors-button").on("click", function(){
+        	    $("#silver-sponsors").css("height", "");
+        	    $("#silver-sponsors").css("overflow", "visible");
+        	});
+        	$(".notsilver").on("click", function(){
+        	    $("#silver-sponsors").css("height", "0");
+        	    $("#silver-sponsors").css("overflow", "hidden");
+        	});
     	    $("#partners").css("height", "0");
     	    $("#partners").css("overflow", "hidden");
         	$("#partner-button").on("click", function(){
@@ -863,12 +873,12 @@
                         </div>
                         <div class="main_mix_menu">
                             <ul>
-                                <li class="btn btn-primary filter othbtn" data-filter="all">All</li>
-                                <li class="btn btn-primary filter othbtn" data-filter=".cat0">Platinum</li>
-                                <li class="btn btn-primary filter othbtn" data-filter=".cat1">Gold</li>
-                                <li class="btn btn-primary filter othbtn" data-filter=".cat2">Silver</li>
-                                <li class="btn btn-primary filter othbtn" data-filter=".cat3">Bronze</li>
-                                <li class="btn btn-primary filter" data-filter=".cat5" id="partner-button">Partners</li>
+                                <li class="btn btn-primary filter othbtn notsilver" data-filter="all">All</li>
+                                <li class="btn btn-primary filter othbtn notsilver" data-filter=".cat0">Platinum</li>
+                                <li class="btn btn-primary filter othbtn notsilver" data-filter=".cat1">Gold</li>
+                                <li class="btn btn-primary filter othbtn" data-filter=".cat2" id="silver-sponsors-button">Silver</li>
+                                <li class="btn btn-primary filter othbtn notsilver" data-filter=".cat3">Bronze</li>
+                                <li class="btn btn-primary filter notsilver" data-filter=".cat5" id="partner-button">Partners</li>
                             </ul>
                         </div>
 
@@ -902,7 +912,7 @@
                                     </div>
                                 </a>
                                 <a href="http://usaa.com">
-                                    <div class="col-sm-3 hidden-xs-down mix cat2 no-padding">
+                                    <div class="col-sm-3 hidden-xs-down mix no-padding">
                                         <div class="mix-logo" style="background-image:url('assets/images/usaa.png');">
                                         </div>
                                         <div class="mix-description">
@@ -912,6 +922,15 @@
                                 </a>
                             </div>
                             <div class="row">
+                                <a href="http://chevron.com">
+                                    <div class="col-sm-3 hidden-xs-down mix no-padding">
+                                        <div class="mix-logo" style="background-image:url('assets/images/chevron.png');">
+                                        </div>
+                                        <div class="mix-description">
+                                            Chevron is a silver sponsor.
+                                        </div>
+                                    </div>
+                                </a>
                                 <a href="https://www.motiva.com/">
                                     <div class="col-sm-3 hidden-xs-down mix cat3 no-padding">
                                         <div class="mix-logo" style="background-image:url('assets/images/motiva.png');">
@@ -939,6 +958,8 @@
                                         </div>
                                     </div>
                                 </a>
+                            </div>
+                            <div class="row">
                                 <a href="http://accenture.com">
                                     <div class="col-sm-3 hidden-xs-down mix no-padding">
                                         <div class="mix-logo" style="background-image:url('assets/images/accenture.png');">
@@ -948,8 +969,6 @@
                                         </div>
                                     </div>
                                 </a>
-                            </div>
-                            <div class="row">
                                 <a href="http://acm-utsa.org/">
                                     <div class="col-sm-3 hidden-xs-down mix no-padding">
                                         <div class="mix-logo" style="background-image:url('assets/images/acm.png');">
@@ -1008,6 +1027,26 @@
                                     </div>
                                 </a>
                             </div>
+                            <div class="row" id="silver-sponsors">
+                                <a href="http://usaa.com">
+                                    <div class="col-sm-3 hidden-xs-down mix cat2 no-padding">
+                                        <div class="mix-logo" style="background-image:url('assets/images/usaa.png');">
+                                        </div>
+                                        <div class="mix-description">
+                                            The mission of the association is to facilitate the financial security of its members, associates, and their families through provision of a full range of highly competitive financial products and services; in so doing, USAA seeks to be the provider of choice for the military community.
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="http://chevron.com">
+                                    <div class="col-sm-3 hidden-xs-down mix cat2 no-padding">
+                                        <div class="mix-logo" style="background-image:url('assets/images/chevron.png');">
+                                        </div>
+                                        <div class="mix-description">
+                                            Chevron is a silver sponsor.
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
                             <!--
                             <a href="http://geekdom.com/">
                                 <div class="col-md-3 mix cat5 no-padding">
@@ -1060,6 +1099,15 @@
                                         </div>
                                         <div>
                                             The mission of the association is to facilitate the financial security of its members, associates, and their families through provision of a full range of highly competitive financial products and services; in so doing, USAA seeks to be the provider of choice for the military community.
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="http://chevron.com">
+                                    <div class="hidden-sm-up col-xs-12 mix cat2 no-padding">
+                                        <div style="background-image:url('assets/images/chevron.png');">
+                                        </div>
+                                        <div>
+                                            Chevron is a silver sponsor.
                                         </div>
                                     </div>
                                 </a>
