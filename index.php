@@ -531,7 +531,11 @@
                                             <div class="home_btn">
                                                 <?php
                                                     if(1){
-                                                        echo('<a class="btn btn-md" id="sign-up-btn" href="https://goo.gl/forms/UGJfEhNoh2GThOxo1" style="margin:10px;">Register</a>');
+                                                        //display nothing
+                                                    }
+                                                    else if(0){
+                                                        //waitlist
+                                                        //echo('<a class="btn btn-md" id="sign-up-btn" href="https://goo.gl/forms/UGJfEhNoh2GThOxo1" style="margin:10px;">Register</a>');
                                                     }
                                                     else if(time() > 1519667940 || (isset($_GET['test']) && $_GET['test'] == 'true')){
                                                         echo('<a class="btn btn-md" id="sign-up-btn" href="https://goo.gl/forms/4UrBPcmCpMZEBkXg1">Register</a>');
@@ -540,7 +544,9 @@
                                                         echo('<a class="btn btn-md" id="sign-up-btn" onclick="preventDefault();">Registration Opens at 12:00</a>');
                                                     }
                                                 ?>
+                                                <!--
                                                 <a class="btn btn-md" id="sign-up-btn" href="https://goo.gl/forms/dQ4sI1s7zZqL8nOu1" style="margin:10px;">Volunteer</a>
+                                                -->
                                             </div>
                                         </div>
                                     </div>
